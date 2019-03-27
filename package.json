@@ -1,0 +1,29 @@
+{
+  "name": "jsonrayga",
+  "version": "1.0.0",
+  "description": "Online Resume CV",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrayga/JasonRayga.git"
+  },
+  "keywords": [
+    "AngularJS"
+  ],
+  "author": "Jason Rayga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrayga/JasonRayga/issues"
+  },
+  "homepage": "https://github.com/jrayga/JasonRayga#readme",
+  "dependencies": {
+    "grunt": "^1.0.2",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-ng-annotate": "^3.0.0"
+  }
+}

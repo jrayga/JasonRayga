@@ -1,0 +1,115 @@
+<div class="row fadeInUp animated" id="aboutMe">
+    <div class="col-sm-4 col-md-4 col-lg-4" id="prof_pic">
+        <img src="./ASSETS/img/jasonrayga.jpg" alt="jasonrayga" class="img-responsive img-circle">
+    </div>
+    <div class="col-sm-8 col-md-8 col-lg-8">
+        <div class="jumbotron">
+            <h1>Jason Bangco Rayga</h1>
+            <p>22 Pag-Asa Street Barangay Pag-Asa Mandaluyong City</p>
+            <p>09214611784</p>
+            <p>raygajason@gmail.com</p>
+            <p><a href="./ASSETS/ResumeRaygaNewUpdated.docx" class="btn btn-danger" role="button"><i
+                        class="glyphicon glyphicon-download"></i>
+                    Download Resume/CV</a></p>
+
+            <div class="row">
+                <div class="col-sm-3 col-sm-offset-9 col-md-3 col-md-offset-9 col-lg-3 col-lg-offset-9">
+                    <i ng-click="gotoFB()" title="My Facebook" id="fb_logo" class="fa fa-facebook-official"></i>
+                    <i ng-click="gotoGmail()" title="My Gmail" id="google_logo" class="fa fa-google"></i>
+                    <i ng-click="gotoLinkedin()" title="My Linkedin" id="linkedin_logo"
+                        class="fa fa-linkedin-square"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Summary</h3>
+            </div>
+            <div class="panel-body">
+                Outgoing young Web Developer knowledgeable in back-end development and front-end development with at
+                least a year of experience.
+                Was the Project Head for the very first Applicant Tracking Software and Resume Bank here in the
+                Philippines.
+                Using numerous programming languages for Dynamic Web Application.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="featuresAndProgrammingLanguages">
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Features and Modules Done</h3>
+            </div>
+            <div class="panel-body panel-height">
+                <ul class="list-group" ng-repeat="v in featuresAndModules track by $index">
+                    <li class="list-group-item"><i class="fa fa-check"></i> {{v}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Programming Languages Used To Develop Softwares</h3>
+            </div>
+            <div class="panel-body panel-height">
+                <ul class="list-group" ng-repeat="v in programmingLanguagesUsed track by $index">
+                    <li class="list-group-item"><i class="fa fa-wrench"></i> {{v}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" id="works">
+    <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Works And Projects Done</h3>
+            </div>
+            <div class="panel-body">
+                <div id="WorkPdoneCar" class="carousel slide" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item" ng-class="{active:!$index}"
+                            ng-repeat="v in works_img_and_desc track by $index">
+                            <img src="{{v.img}}" alt="{{v.title}}" class="img-responsive">
+                            <div class="carousel-caption"
+                                style="background-color: rgba(0, 0, 0, 0.5); border-radius: 25px;">
+                                <h3 style="font-weight: bold;">{{v.title}}</h3>
+                                <p style="font-weight: bold;">{{v.desc}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" data-target="#WorkPdoneCar" data-slide="prev" ng-non-bindable>
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" data-target="#WorkPdoneCar" data-slide="next" ng-non-bindable>
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script type="text/javascript">
+    $('#WorkPdoneCar').carousel
+        ({
+            interval: 2000
+        });
+</script>

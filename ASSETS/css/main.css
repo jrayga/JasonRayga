@@ -1,0 +1,44 @@
+html {
+    scroll-behavior: smooth;
+}
+
+#fb_logo {
+    font-size: 35px;
+    cursor: pointer
+}
+
+#fb_logo:hover {
+    color: #3b5998
+}
+
+#google_logo {
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: 5%
+}
+
+#google_logo:hover {
+    color: #ff4500
+}
+
+#linkedin_logo {
+    font-size: 35px;
+    cursor: pointer;
+    margin-left: 5%
+}
+
+#linkedin_logo:hover {
+    color: #0077b5
+}
+
+#prof_pic {
+    margin: 4% auto
+}
+
+.panel-height {
+    height: 623px
+}
+
+a {
+    cursor: pointer;
+}
