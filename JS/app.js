@@ -66,8 +66,7 @@ app.controller('About', function ($scope, $window, $location, $anchorScroll) {
     }
 
     $scope.goTo = function (scrollTo) {
-        console.log("TCL: $scope.goTo -> scrollTo", scrollTo)
-        $location.hash(scrollTo);
-        $anchorScroll();
+        var element = document.querySelector(`#${scrollTo}`);
+        element.scrollIntoView({ behavior: 'smooth', block: 'end' });
     };
 });

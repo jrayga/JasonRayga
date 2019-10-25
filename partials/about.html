@@ -1,4 +1,4 @@
-<div class="row fadeInUp animated" id="aboutMe">
+<div class="row" id="aboutMe">
     <div class="col-sm-4 col-md-4 col-lg-4" id="prof_pic">
         <img src="./ASSETS/img/jasonrayga.jpg" alt="jasonrayga" class="img-responsive img-circle">
     </div>
@@ -82,7 +82,7 @@
                     <div class="carousel-inner">
                         <div class="item" ng-class="{active:!$index}"
                             ng-repeat="v in works_img_and_desc track by $index">
-                            <img src="{{v.img}}" alt="{{v.title}}" class="img-responsive">
+                            <img src="{{v.img}}" alt="{{v.title}}" class="carousel-proj-img">
                             <div class="carousel-caption"
                                 style="background-color: rgba(0, 0, 0, 0.5); border-radius: 25px;">
                                 <h3 style="font-weight: bold;">{{v.title}}</h3>
