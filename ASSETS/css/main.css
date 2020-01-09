@@ -68,5 +68,5 @@ a {
 .carousel-proj-img {
     display: block !important;
     max-width: 100% !important;
-    height: 900px !important;
+    height: auto !important;
 }
