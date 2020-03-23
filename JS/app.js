@@ -1,5 +1,5 @@
 var app = angular.module('app_module', ['ngRoute', 'ngAnimate']);
-app.config(function ($routeProvider) {
+app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/',
             {
@@ -10,11 +10,13 @@ app.config(function ($routeProvider) {
             {
                 redirectTo: '/'
             })
+    $locationProvider.hashPrefix('!');
 });
 app.controller('Index', function ($scope, $location, $anchorScroll) {
     $scope.nav = 'aboutMe';
 
     $scope.goTo = function (scrollTo) {
+        console.log("TCL: $scope.goTo -> scrollTo", scrollTo)
         $scope.nav = scrollTo;
         $location.hash(scrollTo);
         $anchorScroll();
@@ -22,36 +24,35 @@ app.controller('Index', function ($scope, $location, $anchorScroll) {
 });
 app.controller('About', function ($scope, $window, $location, $anchorScroll) {
 
-    $scope.works_img_and_desc = [
+    $scope.worksImgAndDesc = [
         {
-            title: 'RATS Global : Dashboard',
-            desc: 'ratglobal.com Landing page.',
-            img: './ASSETS/img/ratsglobaldashboard.png'
+            title: 'RATS (Recruiters Applicant Tracking Software)',
+            desc: 'Recruiters Applicant Tracking Software or RATS is the first Filipino developed Applicant Tracking Software and Resume Bank packed with powerful and innovative features and functionalities empowering every recruiter and helping every company in their hiring strategy.',
+            img: './ASSETS/img/RATSLogo.png',
+            url: 'https://ratsglobal.com'
         },
         {
-            title: 'RATS Global : Login Page',
-            desc: 'ratglobal.com Login page.',
-            img: './ASSETS/img/ratsgloballogin.png'
+            title: 'Q App',
+            desc: 'A mobile application (iOS and Android) that allows commuters to virtually queue instead of standing in line in terminals just to secure a seat in public transportation',
+            img: './ASSETS/img/queue_logo.png',
+            url: 'https://q.inciteasia.co'
         },
         {
-            title: 'RATS AOMOS : Login Page',
-            desc: 'ratglobal.com Landing page.',
-            img: './ASSETS/img/ratsglobalLoginpage.png'
+            title: 'DaGAT (Data Gathering & Analytics Tool)',
+            desc: 'Is a web-based platform for sustainability Data Gathering made by PBE that will aid in data collection, analysis, and visualization. This will also enable the company to establish a systematic process for sustainability data management moving forward.',
+            img: './ASSETS/img/dagat-icon.png',
+            url: 'https://landing.pbe-sdt.com'
         },
         {
-            title: 'RATS Global & AOMOS : Applicant Online Registration Link',
-            desc: 'ratglobal.com Applicant Online Registration Link.',
-            img: './ASSETS/img/ratsregistapp.png'
-        },
-        {
-            title: 'Thinkaomos : Email Notification and Marketing and Sales Introductory',
-            desc: 'thinkaomos.com Email Notification and Marketing and Sales Introductory',
-            img: './ASSETS/img/thinkaomos.png'
+            title: 'SDGs Our Biz Sustainability Web Tool',
+            desc: 'A web-based platform to look at how Philippine Businesses are contributing to the Sustainable Development Goals',
+            img: './ASSETS/img/sdgbizphbiz_logo_blue.png',
+            url: 'https://input.sdgsbiz.ph/content/contributions'
         }
     ];
 
-    $scope.featuresAndModules = ['Online Registration Link', 'Career Portal', 'Online Test', 'Email And Text Blasting Notifications', 'Interview Scheduling', 'Data Gathering Tool', 'Android and IoS Applications'];
-    $scope.programmingLanguagesUsed = ['AngularJS 1.x', 'SQL', 'PHP', 'HTML & CSS', 'BootStrap 3.x.', 'Angular 2+', 'AngularFire2', 'Ionic', 'SCSS', 'NoSQL (Firebase)']
+    $scope.featuresAndModules = ['Online Registration Link', 'Career Portal', 'Online Test', 'Email And Text Blasting Notifications', 'Interview Scheduling', 'Data Gathering Tool', 'Applicant Tracking System', 'Android and iOS Applications'];
+    $scope.programmingLanguagesUsed = ['AngularJS 1.x', 'SQL & NoSQL (Firebase)', 'PHP', 'HTML & CSS & SCSS', 'BootStrap 3.x. & 4.x', 'Angular 2+ & AngularFire2', 'Javascript & Typescript', 'Ionic 4+']
 
     $scope.gotoFB = function () {
         $window.open("https://www.facebook.com/jsonryga");
@@ -66,7 +67,7 @@ app.controller('About', function ($scope, $window, $location, $anchorScroll) {
     }
 
     $scope.goTo = function (scrollTo) {
-        var element = document.querySelector(`#${scrollTo}`);
+        var element = document.querySelector("#" + scrollTo);
         element.scrollIntoView({ behavior: 'smooth', block: 'end' });
     };
 });

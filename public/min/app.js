@@ -1,5 +1,5 @@
 var app = angular.module('app_module', ['ngRoute', 'ngAnimate']);
-app.config(['$routeProvider', function ($routeProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/',
             {
@@ -10,11 +10,13 @@ app.config(['$routeProvider', function ($routeProvider) {
             {
                 redirectTo: '/'
             })
+    $locationProvider.hashPrefix('!');
 }]);
 app.controller('Index', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
     $scope.nav = 'aboutMe';
 
     $scope.goTo = function (scrollTo) {
+        console.log("TCL: $scope.goTo -> scrollTo", scrollTo)
         $scope.nav = scrollTo;
         $location.hash(scrollTo);
         $anchorScroll();
@@ -50,8 +52,8 @@ app.controller('About', ['$scope', '$window', '$location', '$anchorScroll', func
         }
     ];
 
-    $scope.featuresAndModules = ['Online Registration Link', 'Career Portal', 'Online Test', 'Email And Text Blasting Notifications', 'Interview Scheduling', 'Data Gathering Tool', 'Android and IoS Applications'];
-    $scope.programmingLanguagesUsed = ['AngularJS 1.x', 'SQL', 'PHP', 'HTML & CSS', 'BootStrap 3.x.', 'Angular 2+', 'AngularFire2', 'Ionic', 'SCSS', 'NoSQL (Firebase)']
+    $scope.featuresAndModules = ['Online Registration Link', 'Career Portal', 'Online Test', 'Email And Text Blasting Notifications', 'Interview Scheduling', 'Data Gathering Tool', 'Applicant Tracking System', 'Android and iOS Applications'];
+    $scope.programmingLanguagesUsed = ['AngularJS 1.x', 'SQL', 'PHP', 'HTML & CSS', 'BootStrap 3.x.', 'Angular 2+', 'AngularFire2', 'Ionic 4+', 'SCSS', 'NoSQL (Firebase)']
 
     $scope.gotoFB = function () {
         $window.open("https://www.facebook.com/jsonryga");
@@ -66,7 +68,7 @@ app.controller('About', ['$scope', '$window', '$location', '$anchorScroll', func
     }
 
     $scope.goTo = function (scrollTo) {
-        var element = document.querySelector(`#${scrollTo}`);
+        var element = document.querySelector("#" + scrollTo);
         element.scrollIntoView({ behavior: 'smooth', block: 'end' });
     };
 }]);
