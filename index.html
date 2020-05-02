@@ -28,7 +28,9 @@
 <body ng-controller="Index" ng-cloak>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#!/">JR</a>
+        <a class="navbar-brand" href="#!/" ng-mouseover="hoveredName()"
+            ng-class="{'jello animated' : didHoverName === true, 'bounce animated' : didHoverName === false}"
+            ng-mouseleave="hoveredName()">{{didHoverName === true ? 'Jason Rayga' : 'JR'}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
             aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

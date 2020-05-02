@@ -48,13 +48,13 @@
 
 <div class="mt-5" id="featuresAndProgrammingLanguages">
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-3">
             <h5>Features and Modules Done</h5>
             <ul class="list-group" ng-repeat="f in featuresAndModules">
                 <li class="list-group-item"><i class="fa fa-check" aria-hidden="true"></i> {{f}}</li>
             </ul>
         </div>
-        <div class="col-sm-12 col-md-6 col-lg-6">
+        <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-3">
             <h5>Programming Languages Used To Develop Softwares</h5>
             <ul class="list-group" ng-repeat="p in programmingLanguagesUsed">
                 <li class="list-group-item"><i class="fa fa-wrench" aria-hidden="true"></i> {{p}}</li>
@@ -71,7 +71,7 @@
     </div>
 
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-6" ng-repeat="(k,v) in worksImgAndDesc track by $index">
+        <div class="col-sm-12 col-md-6 col-lg-6 mt-3 mb-3" ng-repeat="(k,v) in worksImgAndDesc track by $index">
             <div class="card h-100">
                 <img class="card-img-top card-project-img" src="{{v.img}}" alt="Card image cap">
                 <div class="card-body">

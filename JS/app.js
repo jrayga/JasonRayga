@@ -10,17 +10,22 @@ app.config(function ($routeProvider, $locationProvider) {
             {
                 redirectTo: '/'
             })
-    $locationProvider.hashPrefix('!');
 });
-app.controller('Index', function ($scope, $location, $anchorScroll) {
-    $scope.nav = 'aboutMe';
+app.controller('Index', function ($scope, $anchorScroll) {
+    $scope.didHoverName = null
+    $scope.nav = "aboutMe";
 
     $scope.goTo = function (scrollTo) {
         console.log("TCL: $scope.goTo -> scrollTo", scrollTo)
         $scope.nav = scrollTo;
-        $location.hash(scrollTo);
-        $anchorScroll();
+        $anchorScroll(scrollTo);
     };
+
+    $scope.hoveredName = function () {
+        $scope.didHoverName = $scope.didHoverName === null ? false : $scope.didHoverName
+        $scope.didHoverName = $scope.didHoverName === false ? true : false
+        console.log("$scope.hoveredName -> $scope.didHoverName", $scope.didHoverName)
+    }
 });
 app.controller('About', function ($scope, $window, $location, $anchorScroll) {
 
@@ -67,7 +72,6 @@ app.controller('About', function ($scope, $window, $location, $anchorScroll) {
     }
 
     $scope.goTo = function (scrollTo) {
-        var element = document.querySelector("#" + scrollTo);
-        element.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        $anchorScroll(scrollTo)
     };
 });

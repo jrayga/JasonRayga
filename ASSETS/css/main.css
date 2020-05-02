@@ -92,7 +92,7 @@ a {
 
 .card-project-img {
     display  : block;
-    max-width: 286px;
-    height   : auto;
+    max-width: 300px;
+    height   : 160px;
     margin   : 25px auto;
 }

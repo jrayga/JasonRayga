@@ -10,17 +10,22 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
             {
                 redirectTo: '/'
             })
-    $locationProvider.hashPrefix('!');
 }]);
-app.controller('Index', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
-    $scope.nav = 'aboutMe';
+app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
+    $scope.didHoverName = null
+    $scope.nav = "aboutMe";
 
     $scope.goTo = function (scrollTo) {
         console.log("TCL: $scope.goTo -> scrollTo", scrollTo)
         $scope.nav = scrollTo;
-        $location.hash(scrollTo);
-        $anchorScroll();
+        $anchorScroll(scrollTo);
     };
+
+    $scope.hoveredName = function () {
+        $scope.didHoverName = $scope.didHoverName === null ? false : $scope.didHoverName
+        $scope.didHoverName = $scope.didHoverName === false ? true : false
+        console.log("$scope.hoveredName -> $scope.didHoverName", $scope.didHoverName)
+    }
 }]);
 app.controller('About', ['$scope', '$window', '$location', '$anchorScroll', function ($scope, $window, $location, $anchorScroll) {
 
@@ -67,7 +72,6 @@ app.controller('About', ['$scope', '$window', '$location', '$anchorScroll', func
     }
 
     $scope.goTo = function (scrollTo) {
-        var element = document.querySelector("#" + scrollTo);
-        element.scrollIntoView({ behavior: 'smooth', block: 'end' });
+        $anchorScroll(scrollTo)
     };
 }]);
