@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>All About Me | Jason Rayga</title>
+    <meta itemprop="name" content="All About Me | Jason Rayga">
+    <meta itemprop="url" content="http://jrayga.xyz/">
+    <meta name="description" content="Personal Career website to be used in Job Applications and other inquiries.">
 
     <!-- Latest compiled and minified Bootstrap 4.4.1 CSS -->
     <link rel="stylesheet" href="./ASSETS/css/bootstrap.min.css">
@@ -14,21 +17,33 @@
     <!-- Website Icon -->
     <link rel="shortcut icon" type="image/jpg" href="./ASSETS/img/jasonrayga.jpg">
 
-    <!-- MainCSS -->
+    <!-- MainCSS & Plugin CSS -->
     <link rel="stylesheet" href="./ASSETS/css/main.css">
-
-    <!-- Plugin CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./ASSETS/css/animate.min.css">
 
     <!-- Ng1 Main.js -->
     <script src="./ASSETS/js/angular.min.js"></script>
+
+    <!-- Ng1 Plugins -->
+    <script src="./ASSETS/js/angular-route.min.js"></script>
+    <script src="./ASSETS/js/angular-animate.min.js"></script>
+
+    <!-- MainJS -->
+    <script src="./JS/minified/alljs.min.js"></script>
+
+    <!-- Latest compiled and minified Bootstrap 4.4.1 JavaScript And Jquery -->
+    <script src="./ASSETS/js/jquery.min.js"></script>
+    <script src="./ASSETS/js/popper.min.js"></script>
+    <script src="./ASSETS/js/bootstrap.min.js"></script>
+
+    <base href="/JasonRayga/">
 </head>
 
 <body ng-controller="Index" ng-cloak>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#!/" ng-mouseover="hoveredName()"
+        <a class="navbar-brand" href="./" ng-mouseover="hoveredName()"
             ng-class="{'jello animated' : didHoverName === true, 'bounce animated' : didHoverName === false}"
             ng-mouseleave="hoveredName()">{{didHoverName === true ? 'Jason Rayga' : 'JR'}}</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02"
@@ -57,17 +72,6 @@
         <!-- AngularView Here -->
     </div>
 
-    <!-- Ng1 Plugins -->
-    <script src="./ASSETS/js/angular-route.min.js"></script>
-    <script src="./ASSETS/js/angular-animate.min.js"></script>
-
-    <!-- MainJS -->
-    <script src="./JS/minified/alljs.min.js"></script>
-
-    <!-- Latest compiled and minified Bootstrap 4.4.1 JavaScript And Jquery -->
-    <script src="./ASSETS/js/jquery.min.js"></script>
-    <script src="./ASSETS/js/popper.min.js"></script>
-    <script src="./ASSETS/js/bootstrap.min.js"></script>
 </body>
 
 </html>
