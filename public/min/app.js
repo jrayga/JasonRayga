@@ -64,6 +64,12 @@ app.controller('About', ['$scope', '$window', '$location', '$anchorScroll', func
             desc: 'A web-based platform to look at how Philippine Businesses are contributing to the Sustainable Development Goals',
             img: './ASSETS/img/sdgbizphbiz_logo_blue.png',
             url: 'https://input.sdgsbiz.ph/content/contributions'
+        },
+        {
+            title: 'Project Moses',
+            desc: 'Project Moses is a Crisis Response Toolbox that aims to be an all-in-one web dashboard for Filipinos in times of calamity and crisis.',
+            img: './ASSETS/img/project-moses.jpg',
+            url: 'https://www.projectmoses.ph/'
         }
     ];
 
