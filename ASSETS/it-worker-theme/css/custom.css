@@ -1,1 +1,105 @@
 /* your styles go here */
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
+    display: none !important;
+}
+
+html,
+body {
+    width          : 100%;
+    height         : 100%;
+    margin         : 0;
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow        : inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius     : 10px;
+    background-color  : #F5F5F5;
+}
+
+::-webkit-scrollbar {
+    width           : 12px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius     : 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    box-shadow        : inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color  : #555;
+}
+
+#fb_logo {
+    font-size: 35px;
+    cursor   : pointer
+}
+
+#fb_logo:hover {
+    color: #3b5998
+}
+
+#google_logo {
+    font-size  : 35px;
+    cursor     : pointer;
+    margin-left: 5%
+}
+
+#google_logo:hover {
+    color: #ff4500
+}
+
+#linkedin_logo {
+    font-size  : 35px;
+    cursor     : pointer;
+    margin-left: 5%
+}
+
+#linkedin_logo:hover {
+    color: #0077b5
+}
+
+#prof_pic {
+    margin: 4% auto
+}
+
+.panel-height {
+    height: 623px
+}
+
+a {
+    cursor: pointer;
+}
+
+.profile-img {
+    display      : block;
+    max-width    : 100%;
+    height       : auto;
+    border-radius: 166px;
+}
+
+.list-group-item:hover {
+    z-index         : 2;
+    color           : #fff;
+    background-color: #DF691A;
+    border-color    : #DF691A;
+    cursor          : pointer;
+}
+
+.card-project-img {
+    display  : block;
+    max-width: 300px;
+    height   : 160px;
+    margin   : 25px auto;
+}
+
+.image-responsive {
+    height : 150px;
+    width  : 100%;
+    display: block;
+}

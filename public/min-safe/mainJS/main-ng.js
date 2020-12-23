@@ -1,5 +1,5 @@
 var app = angular.module('app_module', ['ngRoute', 'ngAnimate']);
-app.config(function ($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     // $routeProvider
     //     .when('/',
     //         {
@@ -21,8 +21,8 @@ app.config(function ($routeProvider, $locationProvider) {
     //         requireBase: true
     //     });
     // }
-});
-app.controller('Index', function ($scope, $anchorScroll) {
+}]);
+app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
     $scope.didHoverName = null
     $scope.nav = "intro";
     $scope.yearNow = new Date().getFullYear();
@@ -71,7 +71,7 @@ app.controller('Index', function ($scope, $anchorScroll) {
             url: 'https://www.projectmoses.ph/'
         }
     ];
-});
+}]);
 // app.controller('About', function ($scope, $window, $location, $anchorScroll) {
 
 //     $scope.worksImgAndDesc = [
