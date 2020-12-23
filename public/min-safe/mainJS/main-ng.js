@@ -15,12 +15,12 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $lo
     // $locationProvider.html5Mode(true); will cause an error $location in HTML5 mode requires a tag to be present! Unless you set baseUrl tag after head tag like so: <head> <base href="/">
     // To know more about setting base URL visit: https://docs.angularjs.org/error/$location/nobase
     // If you don't wish to set base URL then use this
-    // if (window.history && window.history.pushState) {
-    //     $locationProvider.html5Mode({
-    //         enabled: true,
-    //         requireBase: true
-    //     });
-    // }
+    if (window.history && window.history.pushState) {
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: true
+        });
+    }
 }]);
 app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScroll) {
     $scope.didHoverName = null
