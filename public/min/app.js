@@ -139,7 +139,7 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
             title: 'RATS (Recruiters Applicant Tracking Software)',
             desc: 'Recruiters Applicant Tracking Software or RATS is the first Filipino developed Applicant Tracking Software and Resume Bank packed with powerful and innovative features and functionalities empowering every recruiter and helping every company in their hiring strategy.',
             img: './ASSETS/img/RATSLogo.png',
-            url: 'https://ratsglobal.com'
+            url: 'https://www.facebook.com/aomoschrs/photos/a.188396104827815/1086709888329761/'
         },
         {
             title: 'Q App',
@@ -157,7 +157,7 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
             title: 'SDGs Our Biz Sustainability Web Tool',
             desc: 'A web-based platform to look at how Philippine Businesses are contributing to the Sustainable Development Goals',
             img: './ASSETS/img/sdgbizphbiz_logo_blue.png',
-            url: 'https://input.sdgsbiz.ph/content/contributions'
+            url: 'https://sdgsbiz.ph/docroot/'
         },
         {
             title: 'Project Moses',
