@@ -137,7 +137,7 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
             title: 'RATS (Recruiters Applicant Tracking Software)',
             desc: 'Recruiters Applicant Tracking Software or RATS is the first Filipino developed Applicant Tracking Software and Resume Bank packed with powerful and innovative features and functionalities empowering every recruiter and helping every company in their hiring strategy.',
             img: 'https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/RATSLogo.png',
-            url: 'https://www.facebook.com/aomoschrs/photos/a.188396104827815/1086709888329761/'
+            url: 'https://www.linkedin.com/in/rats-global-5a79a3145/'
         },
         {
             title: 'Q App',
@@ -149,7 +149,7 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
             title: 'DaGAT (Data Gathering & Analytics Tool)',
             desc: 'Is a web-based platform for sustainability Data Gathering made by PBE that will aid in data collection, analysis, and visualization. This will also enable the company to establish a systematic process for sustainability data management moving forward.',
             img: 'https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/dagat-icon.png',
-            url: 'https://landing.pbe-sdt.com'
+            url: 'https://bsdph.org/'
         },
         {
             title: 'SDGs Our Biz Sustainability Web Tool',
