@@ -147,7 +147,7 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
         },
         {
             title: 'DaGAT (Data Gathering & Analytics Tool)',
-            desc: 'Is a web-based platform for sustainability Data Gathering made by PBE that will aid in data collection, analysis, and visualization. This will also enable the company to establish a systematic process for sustainability data management moving forward.',
+            desc: 'Is a web-based platform for sustainability Data Gathering made by BSD (Formerly known as PBE) that will aid in data collection, analysis, and visualization. This will also enable the company to establish a systematic process for sustainability data management moving forward.',
             img: 'https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/dagat-icon.png',
             url: 'https://bsdph.org/'
         },
@@ -159,63 +159,9 @@ app.controller('Index', ['$scope', '$anchorScroll', function ($scope, $anchorScr
         },
         {
             title: 'Project Moses',
-            desc: 'Project Moses is a Crisis Response Toolbox that aims to be an all-in-one web dashboard for Filipinos in times of calamity and crisis.',
+            desc: 'Project Moses is a Crisis Response Toolbox that aims to be an all-in-one platform for Filipinos in times of calamity and crisis mainly and should still be relevant even in times of peace. It is a publicly accessible collaboration toolbox using Information Communication Technology (ICT) meant to connect crisis response actors. The tools are to meant to address the issues on lack of relevant and real-time information to help stop the wildfire of misinformation and promote information that would assuage fears, understand risk, implement effective social distancing and improve our public health.',
             img: 'https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/project-moses.jpg',
             url: 'https://www.projectmoses.ph/'
         }
     ];
 }]);
-// app.controller('About', function ($scope, $window, $location, $anchorScroll) {
-
-//     $scope.worksImgAndDesc = [
-//         {
-//             title: 'RATS (Recruiters Applicant Tracking Software)',
-//             desc: 'Recruiters Applicant Tracking Software or RATS is the first Filipino developed Applicant Tracking Software and Resume Bank packed with powerful and innovative features and functionalities empowering every recruiter and helping every company in their hiring strategy.',
-//             img: './ASSETS/img/RATSLogo.png',
-//             url: 'https://ratsglobal.com'
-//         },
-//         {
-//             title: 'Q App',
-//             desc: 'A mobile application (iOS and Android) that allows commuters to virtually queue instead of standing in line in terminals just to secure a seat in public transportation',
-//             img: './ASSETS/img/queue_logo.png',
-//             url: 'https://q.inciteasia.co'
-//         },
-//         {
-//             title: 'DaGAT (Data Gathering & Analytics Tool)',
-//             desc: 'Is a web-based platform for sustainability Data Gathering made by PBE that will aid in data collection, analysis, and visualization. This will also enable the company to establish a systematic process for sustainability data management moving forward.',
-//             img: './ASSETS/img/dagat-icon.png',
-//             url: 'https://landing.pbe-sdt.com'
-//         },
-//         {
-//             title: 'SDGs Our Biz Sustainability Web Tool',
-//             desc: 'A web-based platform to look at how Philippine Businesses are contributing to the Sustainable Development Goals',
-//             img: './ASSETS/img/sdgbizphbiz_logo_blue.png',
-//             url: 'https://input.sdgsbiz.ph/content/contributions'
-//         },
-//         {
-//             title: 'Project Moses',
-//             desc: 'Project Moses is a Crisis Response Toolbox that aims to be an all-in-one web dashboard for Filipinos in times of calamity and crisis.',
-//             img: './ASSETS/img/project-moses.jpg',
-//             url: 'https://www.projectmoses.ph/'
-//         }
-//     ];
-
-//     // $scope.featuresAndModules = ['Online Registration Link', 'Career Portal', 'Online Test', 'Email And Text Blasting Notifications', 'Interview Scheduling', 'Data Gathering Tool', 'Applicant Tracking System', 'Android and iOS Applications'];
-//     // $scope.programmingLanguagesUsed = ['AngularJS 1.x', 'SQL & NoSQL (Firebase)', 'PHP', 'HTML & CSS & SCSS', 'BootStrap 3.x. & 4.x', 'Angular 2+ & AngularFire2', 'Javascript & Typescript', 'Ionic 4+']
-
-//     // $scope.gotoFB = function () {
-//     //     $window.open("https://www.facebook.com/jsonryga");
-//     // }
-
-//     // $scope.gotoGmail = function () {
-//     //     $window.open("mailto:raygajason@gmail.com");
-//     // }
-
-//     // $scope.gotoLinkedin = function () {
-//     //     $window.open("https://www.linkedin.com/in/jason-rayga-250950141/");
-//     // }
-
-//     // $scope.goTo = function (scrollTo) {
-//     //     $anchorScroll(scrollTo)
-//     // };
-// });
