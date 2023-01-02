@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/jrayga/JasonRayga#readme",
   "dependencies": {
-    "grunt": "^1.1.0",
+    "grunt": "^1.5.3",
     "grunt-cache-breaker": "^2.0.1",
     "grunt-cli": "^1.3.2",
     "grunt-contrib-clean": "^2.0.0",
