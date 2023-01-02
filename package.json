@@ -1,5 +1,5 @@
 {
-  "name": "jsonrayga",
+  "name": "jason-rayga",
   "version": "1.0.0",
   "description": "Online Resume CV",
   "main": "index.js",
@@ -14,7 +14,7 @@
     "AngularJS"
   ],
   "author": "Jason Rayga",
-  "license": "MIT",
+  "license": "PRIVATE",
   "bugs": {
     "url": "https://github.com/jrayga/JasonRayga/issues"
   },
