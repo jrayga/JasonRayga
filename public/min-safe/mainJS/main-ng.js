@@ -77,5 +77,19 @@ app.controller("Index", ['$scope', '$anchorScroll', function ($scope, $anchorScr
       shortDesc:
         "A Crisis Response Toolbox that aims to be an all-in-one platform for Filipinos in times of calamity",
     },
+    {
+      title: "Kandado",
+      desc: `The "Kandado" app is a powerful tool that helps you create secure
+      and unique passwords for all of your online accounts. With advanced
+      algorithms and a database of common passwords, this app ensures that
+      your passwords are virtually impossible to crack. Simply enter the
+      desired password length and customize the characters you want to
+      include, and the app does the rest. Protect your online accounts
+      with the "Kandado" app today!`,
+      img: "https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/kandado.jpg",
+      url: "https://drive.google.com/file/d/1g1gpwSCxF_QKYeDuVF3r9f41cRXWhmtI/view?usp=sharing",
+      shortDesc:
+        "Kandado is a powerful tool that helps you create secure and unique passwords for all of your online accounts.",
+    },
   ];
 }]);
