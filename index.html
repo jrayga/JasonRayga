@@ -2,11 +2,11 @@
 <html lang="en" ng-app="app_module">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>All About Me | Jason Rayga</title>
 
@@ -141,7 +141,7 @@
         <header class="text-center">
           <h2 data-animate="fadeInDown" class="title">About me</h2>
         </header>
-        <div class="row">
+        <div class="row align-items-center">
           <div data-animate="fadeInUp" class="col-lg-6">
             <p>
               Outgoing young Web Developer. Knowledgeable in backend and
@@ -151,7 +151,9 @@
               and Mobile Application development.
             </p>
 
-            <p>Click my picture below to download my resume :)</p>
+            <p class="text-center">
+              Click my picture below to download my resume :)
+            </p>
 
             <div class="row">
               <div data-animate="fadeInUp" class="col-sm-6 mx-auto">
@@ -526,7 +528,7 @@ _________________________________________________________
                     <div class="overlay">
                       <div class="inner">
                         <h3 class="h4 reference-title">{{v.title}}</h3>
-                        <p>{{v.shortDesc}}</p>
+                        <p><small>{{v.shortDesc}}</small></p>
                       </div>
                     </div>
                   </a>
