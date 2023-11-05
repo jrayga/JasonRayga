@@ -52,7 +52,7 @@ module.exports = function (grunt) {
       },
       app: {
         files: {
-          "./public/min-safe/mainJS/main-ng.js": ["./JS/app.js"],
+          "./public/min-safe/mainJS/AppMainModule.js": ["./JS/app.js"],
         },
       },
     },

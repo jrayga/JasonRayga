@@ -1,20 +1,26 @@
-=================================================
-	CREDITS
-=================================================
+===================================================================
+    Plugins Used
+===================================================================
 
-- Bootstrap - http://getbootstrap.com/docs/4.0/getting-started/introduction
+    - Bootstrap 5          -   https://getbootstrap.com/
 
-- Owl Carousel - https://owlcarousel2.github.io/OwlCarousel2/
+    - Font Awesome         -   https://fontawesome.io/
 
-- jQuery Waypoints - http://imakewebthings.com/waypoints/
+    - Swiper.js            -   https://swiperjs.com/
 
-- animate.css - https://daneden.github.io/animate.css/
+    - Universal Parallax   -   https://github.com/marrio-h/universal-parallax
 
-- jQuery Parallax - https://github.com/pixelcog/parallax.js/
+    - Animate.css          -   https://animate.style/
 
-- jQuery Counter Up - https://github.com/bfintal/Counter-Up
+    - Leaflet              -   https://leafletjs.com/
 
-- Nette Framework - http://nette.org/en/
+    - Wow.js               -   https://wowjs.uk/https://wowjs.uk/
+
+    - Waypoints            -   http://imakewebthings.com/waypoints/
+
+    - CountUp.js           -   https://inorganik.github.io/countUp.js/
+
+    - Mixitup              -   https://www.kunkalabs.com/mixitup/
 
 
 =================================================

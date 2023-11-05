@@ -1,23 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app_module">
+<html lang="en" ng-app="module">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All About | Jason Rayga</title>
     <meta itemprop="name" content="JasonRayga" />
     <meta itemprop="url" content="https://www.jrayga.com/" />
     <meta
       name="description"
-      content="As an outgoing and experienced web developer, I possess a strong skillset in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications.."
+      content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
     />
+
+    <title>All About | Jason Rayga</title>
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image:alt" content="JasonRayga" />
     <meta name="twitter:site" content="https://twitter.com/JasonRayga" />
 
-    <!-- Facebook Opengraph data -->
+    <!-- Facebook Open-graph data -->
     <meta property="og:title" content="JasonRayga" />
     <meta property="og:site_name" content="JasonRayga" />
     <meta property="og:type" content="website" />
@@ -25,46 +26,42 @@
     <meta name="robots" content="all,follow" />
     <meta
       property="og:image"
-      content="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.jpg"
+      content="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
     />
     <meta
       property="og:description"
-      content="As an outgoing and experienced web developer, I possess a strong skillset in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications.."
+      content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
     />
 
     <!-- Favicon-->
     <link
       rel="shortcut icon"
-      type="image/jpg"
-      href="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.jpg"
+      type="image/png"
+      href="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
     />
 
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="./dist/main/css/main.min.css" />
+    <!-- Main CSS and Other CSS Plugins -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
     />
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-      crossorigin=""
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="./ASSETS/css/animate.css/source/animate.css" />
+    <link rel="stylesheet" href="./dist/main/css/main.min.css" />
 
-    <!-- Ng1 Main.js, Plugins and Controller-->
-    <script src="./ASSETS/js/angular.min.js"></script>
-    <script src="./ASSETS/js/angular-route.min.js"></script>
-    <script src="./ASSETS/js/angular-animate.min.js"></script>
-    <script src="./public/minified/all.min.js"></script>
-
-    <!-- Main JS -->
-    <script src="./dist/main/js/main.min.js"></script>
+    <!-- AngularJS, Other JS Plugins and Controller-->
     <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-      crossorigin=""
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     ></script>
+    <script src="./dist/main/js/main.min.js"></script>
+    <script src="./public/minified/all.min.js"></script>
 
     <!-- BASE HREF -->
     <base href="/" />
@@ -72,91 +69,49 @@
 
   <body ng-controller="Index" ng-cloak>
     <!-- navbar-->
-    <header class="header">
-      <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-          <a href="" ng-click="goTo('intro')" class="navbar-brand scrollTo">
-            Jason Rayga
-          </a>
-          <button
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarcollapse"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-            class="navbar-toggler navbar-toggler-right"
-          >
-            <span class="fa fa-bars"></span>
-          </button>
-          <div id="navbarcollapse" class="collapse navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a
-                  href=""
-                  ng-click="goTo('intro')"
-                  class="nav-link link-scroll"
-                >
-                  Intro
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href=""
-                  ng-click="goTo('about')"
-                  class="nav-link link-scroll"
-                >
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href=""
-                  ng-click="goTo('services')"
-                  class="nav-link link-scroll"
-                >
-                  Services
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href=""
-                  ng-click="goTo('references')"
-                  class="nav-link link-scroll"
-                >
-                  My work
-                </a>
-              </li>
-              <li class="nav-item">
-                <a
-                  href=""
-                  ng-click="goTo('contact')"
-                  class="nav-link link-scroll"
-                >
-                  Contact
-                </a>
-              </li>
-              <!-- <li class="nav-item"><a href="#testimonials" class="nav-link link-scroll">Testimonials</a></li> -->
-              <!-- <li class="nav-item"><a href="#customers" class="nav-link link-scroll">Clients</a></li> -->
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- Intro Image-->
-    <section
-      id="intro"
-      style="
-        background: url(https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg)
-          center center no-repeat;
-        background-size: cover;
-      "
-      class="intro-section pb-2"
+    <nav
+      class="navbar navbar-expand-lg navbar-light py-4 py-lg-0 fixed-top bg-white border-bottom"
     >
+      <div class="container">
+        <a
+          class="navbar-brand font-serif text-uppercase h6 text-primary fw-bold mb-0"
+          ng-click="goTo('intro')"
+          href=""
+        >
+          Jason Rayga
+        </a>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
+            <li
+              class="nav-item"
+              ng-repeat="(k,v) in navigationURLs track by $index"
+            >
+              <a class="nav-link text-uppercase" ng-click="goTo(v.url)" href="">
+                {{v.title}}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Image-->
+    <section id="intro" class="intro-section pb-2 intro-image-bg">
       <div class="container text-center">
         <div data-animate="fadeInDown" class="logo">
           <img
-            src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/logo-big.png"
+            src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/logo-big.jpg"
             alt="logo"
             width="130"
           />
@@ -173,32 +128,34 @@
           class="h3 text-shadow text-400"
           style="text-shadow: -3px 3px 4px black"
         >
-          <strong>Jason Rayga here! At your service ♥</strong>
+          <strong>Jason Rayga here! At your service ❤️</strong>
         </p>
       </div>
     </section>
 
-    <!-- main-view -->
     <!-- About-->
     <section id="about" class="about-section">
       <div class="container">
         <header class="text-center">
           <h2 data-animate="fadeInDown" class="title">About me</h2>
         </header>
-        <div class="row align-items-center">
+        <div class="row">
           <div data-animate="fadeInUp" class="col-lg-6">
             <p>
               As an outgoing and experienced web developer, I possess a strong
-              skillset in both backend and frontend development. I have a proven
-              track record of success as the lead developer for the Philippines'
-              first applicant tracking software and resume bank. I am
-              well-versed in various programming languages and have experience
-              creating dynamic web and mobile applications.
+              skill-set in both backend and frontend development.
+            </p>
+            <p>
+              I have a proven track record of success as the lead developer for
+              the Philippines' first applicant tracking software and resume
+              bank.
+            </p>
+            <p>
+              I am well-versed in various programming languages and have
+              experience creating dynamic web and mobile applications.
             </p>
 
-            <p class="text-center">
-              Click my picture below to download my resume :)
-            </p>
+            <p>Click my picture below to download my resume 😊</p>
 
             <div class="row">
               <div data-animate="fadeInUp" class="col-sm-6 mx-auto">
@@ -207,7 +164,7 @@
                   title="Download Resume"
                 >
                   <img
-                    src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.jpg"
+                    src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
                     alt="This is me - Jason Rayga"
                     class="image rounded-circle img-fluid"
                   />
@@ -223,7 +180,7 @@
                   role="progressbar"
                   style="width: 60%"
                   aria-valuenow="60"
-                  aria-valuemin="60"
+                  aria-valuemin="0"
                   aria-valuemax="100"
                   class="progress-bar"
                 ></div>
@@ -236,7 +193,7 @@
                   role="progressbar"
                   style="width: 65%"
                   aria-valuenow="65"
-                  aria-valuemin="60"
+                  aria-valuemin="0"
                   aria-valuemax="100"
                   class="progress-bar"
                 ></div>
@@ -249,7 +206,7 @@
                   role="progressbar"
                   style="width: 80%"
                   aria-valuenow="80"
-                  aria-valuemin="60"
+                  aria-valuemin="0"
                   aria-valuemax="100"
                   class="progress-bar"
                 ></div>
@@ -338,9 +295,9 @@
               <div class="progress">
                 <div
                   role="progressbar"
-                  style="width: 50%"
-                  aria-valuenow="50"
-                  aria-valuemin="50"
+                  style="width: 60%"
+                  aria-valuenow="60"
+                  aria-valuemin="0"
                   aria-valuemax="100"
                   class="progress-bar"
                 ></div>
@@ -351,7 +308,7 @@
       </div>
     </section>
 
-    <!-- Service-->
+    <!-- Services -->
     <section id="services" class="bg-gradient services-section">
       <div class="container">
         <header class="text-center">
@@ -421,146 +378,7 @@
       </div>
     </section>
 
-    <!-- Testimonials-->
-    <!-- <section id="testimonials" class="testimonials-section bg-gray">
-  <div class="container">
-      <header class="text-center mb-2">
-          <h2 data-animate="fadeInUp" class="title">My customers said<br><span>about me</span></h2>
-          <p data-animate="fadeInUp" class="lead">I am always glad to hear that my customers leave satisfied. Some
-              of them shared with you their insights on our cooperation.</p>
-      </header>
-      <ul data-animate="fadeInUp" class="owl-carousel owl-theme testimonials equalize-height">
-          <li class="item">
-              <div class="testimonial full-height">
-                  <div class="text">
-                      <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in
-                          his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his
-                          head a little he could see his brown belly, slightly domed and divided by arches into
-                          stiff sections.</p>
-                  </div>
-                  <div class="bottom">
-                      <div class="icon"><i class="fa fa-quote-left"></i></div>
-                      <div class="name-picture"><img alt="" src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/person-1.jpg">
-                          <h5>John McIntyre</h5>
-                          <p>CEO, TransTech</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="item">
-              <div class="testimonial full-height">
-                  <div class="text">
-                      <p>The bedding was hardly able to cover it and seemed ready to slide off any moment. His
-                          many legs, pitifully thin compared with the size of the rest of him, waved about
-                          helplessly as he looked. &quot;What is happened to me? &quot; he thought. It was not a
-                          dream.</p>
-                  </div>
-                  <div class="bottom">
-                      <div class="icon"><i class="fa fa-quote-left"></i></div>
-                      <div class="name-picture"><img alt="" src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/person-2.jpg">
-                          <h5>John McIntyre</h5>
-                          <p>CEO, TransTech</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="item">
-              <div class="testimonial full-height">
-                  <div class="text">
-                      <p>His room, a proper human room although a little too small, lay peacefully between its
-                          four familiar walls. A collection of textile samples lay spread out on the table - Samsa
-                          was a travelling salesman - and above it there hung a picture that he had recently cut
-                          out of an illustrated magazine and housed in a nice, gilded frame.</p>
-                  </div>
-                  <div class="bottom">
-                      <div class="icon"><i class="fa fa-quote-left"></i></div>
-                      <div class="name-picture"><img alt="" src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/person-3.jpg">
-                          <h5>John McIntyre</h5>
-                          <p>CEO, TransTech</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="item">
-              <div class="testimonial full-height">
-                  <div class="text">
-                      <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy
-                          fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned
-                          to look out the window at the dull weather. Drops of rain could be heard hitting the
-                          pane, which made him feel quite sad.</p>
-                  </div>
-                  <div class="bottom">
-                      <div class="icon"><i class="fa fa-quote-left"></i></div>
-                      <div class="name-picture"><img alt="" src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/person-4.jpg">
-                          <h5>John McIntyre</h5>
-                          <p>CEO, TransTech</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-          <li class="item">
-              <div class="testimonial full-height">
-                  <div class="text">
-                      <p>It showed a lady fitted out with a fur hat and fur boa who sat upright, raising a heavy
-                          fur muff that covered the whole of her lower arm towards the viewer. Gregor then turned
-                          to look out the window at the dull weather. Drops of rain could be heard hitting the
-                          pane, which made him feel quite sad. Gregor then turned to look out the window at the
-                          dull weather. Drops of rain could be heard hitting the pane, which made him feel quite
-                          sad.</p>
-                  </div>
-                  <div class="bottom">
-                      <div class="icon"><i class="fa fa-quote-left"></i></div>
-                      <div class="name-picture"><img alt="" src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/person-4.jpg">
-                          <h5>John McIntyre</h5>
-                          <p>CEO, TransTech</p>
-                      </div>
-                  </div>
-              </div>
-          </li>
-      </ul>
-  </div>
-</section> -->
-
-    <!-- Statistics-->
-    <!-- <section id="statistics" data-dir="up"
-  style="background: url(&quot;https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/parallax.jpg&quot;);"
-  class="statistics-section text-white parallax parallax">
-  <div class="container">
-      <div class="row showcase text-center">
-          <div data-animate="fadeInUp" class="col-lg-3 col-md-6">
-              <div class="item">
-                  <div class="icon"><i class="fa fa-align-justify"></i></div>
-                  <h5 class="text-400 mt-4 text-uppercase"><span class="counter">120</span><br>Websites</h5>
-              </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-3 col-md-6">
-              <div class="item">
-                  <div class="icon"><i class="fa fa-users"></i></div>
-                  <h5 class="text-400 mt-4 text-uppercase"><span class="counter">50</span><br>Satisfied Clients
-                  </h5>
-              </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-3 col-md-6">
-              <div class="item">
-                  <div class="icon"><i class="fa fa-copy"></i></div>
-                  <h5 class="text-400 mt-4 text-uppercase"><span class="counter">320</span><br>Projects</h5>
-              </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-3 col-md-6">
-              <div class="item">
-                  <div class="icon"><i class="fa fa-font"></i></div>
-                  <h5 class="text-400 mt-4 text-uppercase"><span class="counter">333</span><br>Magazines and
-                      Brochures</h5>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="dark-mask"></div>
-</section> -->
-    <!--
-*** REFERENCES IMAGE ***
-_________________________________________________________
--->
+    <!-- References -->
     <section id="references">
       <div class="container">
         <div class="col-sm-12">
@@ -571,13 +389,6 @@ _________________________________________________________
               latest for you.
             </p>
           </div>
-          <!-- <ul id="filter" data-animate="fadeInUp">
-          <li class="active"><a href="#" data-filter="all">All</a></li>
-          <li><a href="#" data-filter="webapp">Webdesign</a></li>
-          <li><a href="#" data-filter="seo">SEO</a></li>
-          <li><a href="#" data-filter="marketing">Marketing</a></li>
-          <li><a href="#" data-filter="other">Other</a></li>
-        </ul> -->
           <div id="detail">
             <div class="row">
               <div class="col-lg-10 mx-auto">
@@ -624,139 +435,11 @@ _________________________________________________________
                         class="btn btn-outline-primary"
                         ><i class="fa fa-globe"></i> Visit
                       </a>
-                      <!-- <a
-                        href="javascript:void(0);"
-                        class="btn btn-outline-primary"
-                        ><i class="fa fa-download"></i> Download case study</a
-                      > -->
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Customers-->
-    <!-- <section id="customers" class="customers-section bg-gray">
-  <div class="container">
-      <div class="col-md-12">
-          <div class="row align-items-center">
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-1.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-2.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-3.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-4.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-5.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-              <div class="col-lg-2 col-md-4 col-sm-6">
-                  <div class="customer"><img src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/it-worker-theme/img/customers/logo-6.svg"
-                          title="brand logo" data-placement="bottom" data-toggle="tooltip" alt=""
-                          class="img-fluid d-block mx-auto">
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
-</section> -->
-
-    <!-- Contact-->
-    <section
-      id="contact"
-      data-animate="bounceIn"
-      class="contact-section contact"
-    >
-      <div class="container">
-        <header class="text-center">
-          <h2 class="title">Contact me</h2>
-        </header>
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <form
-              id="contact-form"
-              action="mailto:rayga@gmail.com"
-              method="post"
-              enctype="text/plain"
-            >
-              <div class="messages"></div>
-              <div class="controls">
-                <div class="row">
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="name"
-                      placeholder="Your firstname *"
-                      required="required"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="surname"
-                      placeholder="Your lastname *"
-                      required="required"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="email"
-                      placeholder="Your email *"
-                      required="required"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-6">
-                    <input
-                      type="text"
-                      name="phone"
-                      placeholder="Your phone"
-                      class="form-control"
-                    />
-                  </div>
-                  <div class="col-md-12">
-                    <textarea
-                      name="message"
-                      placeholder="Message for me *"
-                      rows="4"
-                      required="required"
-                      class="form-control"
-                    ></textarea>
-                  </div>
-                  <div class="col-md-12 text-center">
-                    <button type="submit" class="btn btn-outline-primary">
-                      Send message
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
@@ -773,21 +456,21 @@ _________________________________________________________
                 href="https://www.facebook.com/jsonryga/"
                 target="_blank"
                 class="external facebook wow fadeInUp"
-                ><i class="fa fa-facebook"></i
+                ><i class="fab fa-facebook-f"></i
               ></a>
               <a
                 href="https://www.linkedin.com/in/jasonrayga/"
                 target="_blank"
                 data-wow-delay="0.2s"
                 class="external linkedin wow fadeInUp"
-                ><i class="fa fa-linkedin" aria-hidden="true"></i
+                ><i class="fab fa-linkedin" aria-hidden="true"></i
               ></a>
               <a
                 href="mailto:raygajason@gmail.com"
                 target="_blank"
                 data-wow-delay="0.6s"
                 class="email wow fadeInUp"
-                ><i class="fa fa-envelope" aria-hidden="true"></i
+                ><i class="fas fa-envelope" aria-hidden="true"></i
               ></a>
             </p>
           </div>
@@ -798,6 +481,35 @@ _________________________________________________________
         </div>
       </div>
     </footer>
-    <!-- JavaScript files-->
+
+    <!-- Other JS Plugins -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
   </body>
 </html>

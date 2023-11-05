@@ -1,4 +1,4 @@
-var app = angular.module("app_module", ["ngRoute", "ngAnimate"]);
+var app = angular.module("module", ["ngRoute", "ngAnimate"]);
 app.config(function ($routeProvider, $locationProvider) {
   // $routeProvider
   //   .when("/", {
@@ -82,6 +82,25 @@ app.controller("Index", function ($scope, $anchorScroll) {
       url: "https://drive.google.com/file/d/1g1gpwSCxF_QKYeDuVF3r9f41cRXWhmtI/view?usp=sharing",
       shortDesc:
         "Kandado is a powerful tool that helps you create secure and unique passwords for all of your online accounts.",
+    },
+  ];
+
+  $scope.navigationURLs = [
+    {
+      title: "Intro",
+      url: "intro",
+    },
+    {
+      title: "About",
+      url: "about",
+    },
+    {
+      title: "Services",
+      url: "services",
+    },
+    {
+      title: "References",
+      url: "references",
     },
   ];
 });

@@ -1,0 +1,66 @@
+<!-- References -->
+<section id="references">
+  <div class="container">
+    <div class="col-sm-12">
+      <div class="mb-5 text-center">
+        <h2 data-animate="fadeInUp" class="title">My work</h2>
+        <p data-animate="fadeInUp" class="lead">
+          I have worked on dozens of projects so I have picked only the latest
+          for you.
+        </p>
+      </div>
+      <div id="detail">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <span class="close">x</span>
+            <div id="detail-slider" class="owl-carousel owl-theme"></div>
+            <div class="text-center">
+              <h1 id="detail-title" class="title"></h1>
+            </div>
+            <div id="detail-content"></div>
+          </div>
+        </div>
+      </div>
+      <!-- Reference detail-->
+      <div id="references-masonry" data-animate="fadeInUp">
+        <div class="row">
+          <div
+            class="reference-item col-sm-12 col-md-4 col-lg-4"
+            ng-repeat="(k,v) in worksImgAndDesc track by $index"
+            data-category="webapp"
+          >
+            <div class="reference">
+              <a href="">
+                <img
+                  src="{{v.img}}"
+                  alt="{{v.title}}"
+                  class="image-responsive"
+                />
+                <div class="overlay">
+                  <div class="inner">
+                    <h3 class="h4 reference-title">{{v.title}}</h3>
+                    <p><small>{{v.shortDesc}}</small></p>
+                  </div>
+                </div>
+              </a>
+              <div
+                data-images="{{v.img}}"
+                class="sr-only reference-description"
+              >
+                <p>{{v.desc}}</p>
+                <p class="buttons text-center">
+                  <a
+                    href="{{v.url}}"
+                    target="_blank"
+                    class="btn btn-outline-primary"
+                    ><i class="fa fa-globe"></i> Visit
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
