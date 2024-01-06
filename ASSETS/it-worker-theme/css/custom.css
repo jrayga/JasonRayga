@@ -95,9 +95,10 @@ a {
 }
 
 .image-responsive {
-  height: 200px;
   width: 100%;
-  display: block;
+  height: 550px;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 .intro-image-bg {
