@@ -62,7 +62,7 @@
     animation-iteration-count: 1 !important;
   }
 
-  .animated[class*='Out'] {
+  .animated[class*="Out"] {
     opacity: 0;
   }
 }
