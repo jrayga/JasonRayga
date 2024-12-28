@@ -2,7 +2,10 @@
 <html lang="en" ng-app="module">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <meta itemprop="name" content="JasonRayga" />
     <meta itemprop="url" content="https://www.jrayga.com/" />
     <meta
@@ -23,10 +26,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" itemprop="url" content="https://www.jrayga.com/" />
     <meta name="robots" content="all,follow" />
-    <meta
-      property="og:image"
-      content="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
-    />
+    <meta property="og:image" content="./dist/main/assets/img/jasonrayga.png" />
     <meta
       property="og:description"
       content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
@@ -36,7 +36,7 @@
     <link
       rel="shortcut icon"
       type="image/png"
-      href="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
+      href="./dist/main/assets/img/jasonrayga.png"
     />
 
     <!-- Main CSS and Other CSS Plugins -->
@@ -53,7 +53,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/css/animate_css/source/animate.css"
+      href="./dist/main/assets/css/animate_css/source/animate.css"
     />
     <link rel="stylesheet" href="./dist/main/css/main.min.css" />
 
@@ -114,7 +114,7 @@
       <div class="container text-center">
         <div data-animate="fadeInDown" class="logo">
           <img
-            src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/intro-icon.png"
+            src="./dist/main/assets/img/intro-icon.png"
             alt="logo"
             width="130"
           />
@@ -166,11 +166,11 @@
             <div class="row">
               <div data-animate="fadeInUp" class="col-sm-6 mx-auto">
                 <a
-                  href="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/JasonRayga.pdf"
+                  href="./dist/main/assets/JasonRayga.pdf"
                   title="Download Resume"
                 >
                   <img
-                    src="https://raw.githubusercontent.com/jrayga/JasonRayga/master/ASSETS/img/jasonrayga.png"
+                    src="./dist/main/assets/img/jasonrayga.png"
                     alt="This is me - Jason Rayga"
                     class="image rounded-circle img-fluid"
                   />
@@ -459,25 +459,34 @@
           <div class="col-md-6 text-center text-lg-left">
             <p class="social">
               <a
+                title="Facebook"
                 href="https://www.facebook.com/jsonryga/"
                 target="_blank"
                 class="external facebook wow fadeInUp"
-                ><i class="fab fa-facebook-f"></i
-              ></a>
+                referrerpolicy="no-referrer"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
               <a
+                title="Linkedin"
                 href="https://www.linkedin.com/in/jasonrayga/"
                 target="_blank"
                 data-wow-delay="0.2s"
                 class="external linkedin wow fadeInUp"
-                ><i class="fab fa-linkedin" aria-hidden="true"></i
-              ></a>
+                referrerpolicy="no-referrer"
+              >
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
               <a
+                title="Email"
                 href="mailto:raygajason@gmail.com"
                 target="_blank"
                 data-wow-delay="0.6s"
                 class="email wow fadeInUp"
-                ><i class="fas fa-envelope" aria-hidden="true"></i
-              ></a>
+                referrerpolicy="no-referrer"
+              >
+                <i class="fas fa-envelope" aria-hidden="true"></i>
+              </a>
             </p>
           </div>
           <!-- /.6-->
@@ -509,6 +518,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <script type="text/javascript">
+      // Scripts here should prevent zooming in when using mobile view
+
+      document.addEventListener("gesturestart", function (e) {
+        e.preventDefault();
+        // special hack to prevent zoom-to-tabs gesture in safari
+        document.body.style.zoom = 0.99;
+      });
+
+      document.addEventListener("gesturechange", function (e) {
+        e.preventDefault();
+        // special hack to prevent zoom-to-tabs gesture in safari
+        document.body.style.zoom = 0.99;
+      });
+
+      document.addEventListener("gestureend", function (e) {
+        e.preventDefault();
+        // special hack to prevent zoom-to-tabs gesture in safari
+        document.body.style.zoom = 0.99;
+      });
 
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link
