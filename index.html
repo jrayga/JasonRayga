@@ -47,7 +47,8 @@
     />
     <link
       rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
+      integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
@@ -57,9 +58,18 @@
     />
     <link rel="stylesheet" href="./dist/main/css/main.min.css" />
 
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
     <!-- AngularJS, Other JS Plugins and Controller-->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
+      integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -205,7 +215,7 @@
                 ></div>
               </div>
             </div>
-              <div class="skill-item">
+            <div class="skill-item">
               <div class="progress-title">SQL Server</div>
               <div class="progress">
                 <div
@@ -513,21 +523,25 @@
     <!-- Other JS Plugins -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
+      integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.min.js"
+      integrity="sha512-Vhup4/4s+jnmiFsp1Sg1/6jXncRbIBc+fKemYjq1n+nEXthmeASyaWnClWsAV5Sas7WbLMLNYYHw6TxwQE4oPQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
     <script
-      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
+      integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"
+      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.1/countUp.min.js"
+      integrity="sha512-/vi3WD/9SQaARlmuVHo8VdfQJS6b26CZtEOizrcY1D5VCVSO+7acITDYEYnVSupkgS2V83bPLYyK0/8WgQOJzA=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -553,13 +567,5 @@
         document.body.style.zoom = 0.99;
       });
     </script>
-
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
   </body>
 </html>
