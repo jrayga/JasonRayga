@@ -16,7 +16,7 @@
   --map-filter:  brightness(0.5) invert(1) contrast(3) hue-rotate(200deg) saturate(0.25) brightness(0.7);
 
   /* Invariants */
-  --font-sans:   'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans:   'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-mono:   'Space Mono', 'Fira Code', monospace;
   --nav-h:       70px;
   --max-w:       1100px;
