@@ -151,8 +151,8 @@ function initMap() {
   if (typeof L === "undefined") return;
 
   const map = L.map("map", {
-    scrollWheelZoom: false,
-    zoomControl: true,
+    scrollWheelZoom: true,
+    zoomControl: false,
   });
 
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -164,7 +164,7 @@ function initMap() {
 
   L.marker(coords)
     .addTo(map)
-    .bindPopup("<strong>Manila, Philippines</strong>")
+    .bindPopup("<strong>Manila, Philippines</strong>", { closeButton: false })
     .openPopup();
 }
 
