@@ -5,37 +5,37 @@ const PORTFOLIO = [
   {
     title: "RATS — Recruiters Applicant Tracking Software",
     shortDesc: "The first Filipino-developed Applicant Tracking Software and Resume Bank — a centralised platform for managing job applications, candidate sourcing, and hiring analytics.",
-    img: "./dist/main/assets/img/RATSLogo.png",
+    img: "./assets/img/RATSLogo.png",
     url: "https://www.linkedin.com/in/rats-global-5a79a3145/",
   },
   {
     title: "Q App",
     shortDesc: "A mobile app that lets commuters virtually queue for UV Express seats, with real-time GPS tracking, estimated wait times, and boarding notifications.",
-    img: "./dist/main/assets/img/queue_logo.png",
+    img: "./assets/img/queue_logo.png",
     url: "https://q.inciteasia.co",
   },
   {
     title: "DaGAT — Data Gathering & Analytics Tool",
     shortDesc: "A web-based sustainability platform empowering organisations to collect, analyse, and visualise environmental performance data through an intuitive dashboard.",
-    img: "./dist/main/assets/img/dagat-icon.png",
+    img: "./assets/img/dagat-icon.png",
     url: "https://bsdph.org/",
   },
   {
     title: "SDGs Our Biz Sustainability Web Tool",
     shortDesc: "Tracks how Philippine businesses contribute to the UN Sustainable Development Goals, with interactive charts, company profiles, and knowledge-sharing tools.",
-    img: "./dist/main/assets/img/sdgbizphbiz_logo_blue.png",
+    img: "./assets/img/sdgbizphbiz_logo_blue.png",
     url: "https://sdgsbiz.ph/docroot/",
   },
   {
     title: "Project Moses",
     shortDesc: "A crisis response toolbox for Filipinos during calamities — connecting first-responders with real-time verified information to combat misinformation.",
-    img: "./dist/main/assets/img/project-moses.jpg",
+    img: "./assets/img/project-moses.jpg",
     url: "https://www.projectmoses.ph/",
   },
   {
     title: "Kandado",
     shortDesc: "A password generator using advanced algorithms to create secure, unique passwords. Customisable length and character sets to protect your online accounts.",
-    img: "./dist/main/assets/img/kandado.jpg",
+    img: "./assets/img/kandado.jpg",
     url: "https://drive.google.com/file/d/1g1gpwSCxF_QKYeDuVF3r9f41cRXWhmtI/view?usp=sharing",
   },
 ];
