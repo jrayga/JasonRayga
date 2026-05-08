@@ -509,6 +509,27 @@ ul { list-style: none; }
   overflow: hidden;
 }
 
+.portfolio-card { cursor: pointer; }
+
+.portfolio-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.portfolio-card-more {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: var(--transition);
+}
+.portfolio-card:hover .portfolio-card-more { color: var(--accent); }
+
 .portfolio-card-link {
   display: inline-flex;
   align-items: center;
@@ -519,9 +540,103 @@ ul { list-style: none; }
   border: 1px solid var(--accent);
   border-radius: var(--radius);
   padding: 6px 14px;
-  align-self: flex-start;
+  flex-shrink: 0;
 }
 .portfolio-card-link:hover { background: var(--accent-tint); opacity: 1; }
+
+/* ============================================================
+   Portfolio Modal
+   ============================================================ */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: var(--bg-light);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  border-radius: var(--radius-lg);
+  max-width: 580px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  position: relative;
+  transform: translateY(24px);
+  transition: transform 0.3s ease;
+}
+
+.modal-backdrop.open .modal { transform: translateY(0); }
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 7px;
+  border-radius: 50%;
+  transition: var(--transition);
+  z-index: 1;
+  line-height: 1;
+}
+.modal-close:hover { color: var(--accent); background: var(--accent-tint); }
+
+.modal-img {
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-img img {
+  max-height: 140px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.modal-body { padding: 28px 32px 32px; }
+
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 14px;
+  line-height: 1.4;
+  padding-right: 24px;
+}
+
+.modal-desc {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.85;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 520px) {
+  .modal-body { padding: 22px 20px 24px; }
+  .modal-img { padding: 24px; }
+}
 
 /* ============================================================
    Services
