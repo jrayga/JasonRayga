@@ -25,7 +25,7 @@ python -m http.server
 - **Vanilla HTML/CSS/JS** — no frameworks, no build tools
 - **Leaflet.js** — map widget (CDN)
 - **FontAwesome 6** — icons (CDN)
-- **Inter + Space Mono** — fonts (Google Fonts CDN)
+- **Poppins + Space Mono** — fonts (Google Fonts CDN)
 - **Intersection Observer API** — scroll-triggered animations (native)
 
 ### File Layout

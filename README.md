@@ -7,7 +7,7 @@ Personal portfolio and resume website, live at [www.jrayga.com](https://www.jray
 - Vanilla HTML, CSS, and JavaScript — no frameworks or build tools
 - [Leaflet.js](https://leafletjs.com/) for the interactive map
 - [FontAwesome 6](https://fontawesome.com/) for icons
-- [Inter](https://fonts.google.com/specimen/Inter) + [Space Mono](https://fonts.google.com/specimen/Space+Mono) from Google Fonts
+- [Poppins](https://fonts.google.com/specimen/Poppins) + [Space Mono](https://fonts.google.com/specimen/Space+Mono) from Google Fonts
 - Hosted on GitHub Pages with a custom domain
 
 ## Structure
