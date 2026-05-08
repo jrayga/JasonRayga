@@ -177,6 +177,37 @@ function setYear() {
 }
 
 /* ============================================================
+   Theme toggle
+   ============================================================ */
+function getActiveTheme() {
+  const explicit = document.documentElement.getAttribute("data-theme");
+  if (explicit === "light" || explicit === "dark") return explicit;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+}
+
+function syncToggleIcon() {
+  const btn = document.getElementById("theme-toggle");
+  if (!btn) return;
+  const isDark = getActiveTheme() === "dark";
+  btn.querySelector("i").className = isDark ? "fas fa-sun" : "fas fa-moon";
+  btn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+}
+
+function initTheme() {
+  syncToggleIcon();
+
+  document.getElementById("theme-toggle")?.addEventListener("click", () => {
+    const next = getActiveTheme() === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+    syncToggleIcon();
+  });
+
+  // Keep icon in sync if the OS preference changes while the page is open
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", syncToggleIcon);
+}
+
+/* ============================================================
    Init
    ============================================================ */
 document.addEventListener("DOMContentLoaded", () => {
@@ -186,4 +217,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavbar();
   initSkillBars();
   initMap();
+  initTheme();
 });

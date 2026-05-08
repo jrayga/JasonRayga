@@ -55,6 +55,14 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Apply saved theme before first paint to prevent flash -->
+    <script>
+      try {
+        const t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    </script>
   </head>
 
   <body>
@@ -77,6 +85,9 @@
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#services">Services</a></li>
           </ol>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Switch to light mode">
+            <i class="fas fa-sun"></i>
+          </button>
           <a
             href="./assets/JasonRayga.pdf"
             class="btn-nav"
