@@ -97,6 +97,11 @@ function initNavbar() {
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", closeMenu);
   });
+
+  // Close when tapping the backdrop (outside the links / resume button)
+  menu.addEventListener("click", (e) => {
+    if (e.target === menu) closeMenu();
+  });
 }
 
 /* ============================================================

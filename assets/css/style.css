@@ -51,7 +51,7 @@ ul { list-style: none; }
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-h);
-  z-index: 100;
+  z-index: 200;
   background: rgba(10, 25, 47, 0.85);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -121,12 +121,14 @@ ul { list-style: none; }
 .nav-toggle {
   display: none;
   flex-direction: column;
+  justify-content: center;
   gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
-  z-index: 200;
+  padding: 8px;
+  z-index: 201;
+  position: relative;
 }
 .nav-toggle span {
   display: block;
@@ -134,6 +136,7 @@ ul { list-style: none; }
   height: 2px;
   background: var(--accent);
   transition: var(--transition);
+  transform-origin: center;
 }
 .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
@@ -611,6 +614,8 @@ footer {
 
   .nav-toggle { display: flex; }
 
+  .nav-inner { padding: 0 20px; }
+
   .nav-menu {
     position: fixed;
     inset: 0;
@@ -620,7 +625,7 @@ footer {
     gap: 36px;
     transform: translateX(100%);
     transition: transform 0.3s ease;
-    z-index: 150;
+    z-index: 190;
   }
 
   .nav-menu.open { transform: translateX(0); }
