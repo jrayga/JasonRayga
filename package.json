@@ -1,36 +1,15 @@
 {
   "name": "jason-rayga",
-  "version": "1.0.0",
-  "description": "Online Resume CV",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "audit": "ncu && better-npm-audit audit"
-  },
+  "version": "2.0.0",
+  "description": "Personal portfolio website — www.jrayga.com",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jrayga/JasonRayga.git"
   },
-  "keywords": [
-    "AngularJS"
-  ],
   "author": "Jason Rayga",
   "license": "PRIVATE",
   "bugs": {
     "url": "https://github.com/jrayga/JasonRayga/issues"
   },
-  "homepage": "https://github.com/jrayga/JasonRayga#readme",
-  "dependencies": {
-    "grunt": "^1.6.1",
-    "grunt-cache-breaker": "^2.0.1",
-    "grunt-cli": "^1.5.0",
-    "grunt-contrib-clean": "^2.0.1",
-    "grunt-contrib-concat": "^2.1.0",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-cssmin": "^5.0.0",
-    "grunt-contrib-uglify": "^5.2.2",
-    "grunt-contrib-uglify-es": "github:gruntjs/grunt-contrib-uglify#harmony",
-    "grunt-ng-annotate": "^4.0.0",
-    "grunt-usemin": "^3.1.1"
-  }
+  "homepage": "https://www.jrayga.com"
 }

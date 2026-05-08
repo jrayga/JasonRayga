@@ -4,62 +4,58 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-Personal portfolio/resume website for Jason Rayga, hosted at www.jrayga.com. Built as a single-page application with anchor-based navigation.
+Personal portfolio/resume website for Jason Rayga, hosted at www.jrayga.com. A single-page application with anchor-based navigation, built with vanilla HTML, CSS, and JavaScript — no frameworks, no build pipeline.
 
-## Build Commands
+## Development
+
+No build step required. Open `index.html` in a browser or serve with any static file server:
 
 ```bash
-npm install       # Install all Grunt dependencies
-grunt             # Run full production build pipeline
+# VS Code Live Server (recommended)
+# Right-click index.html → "Open with Live Server"
+
+# Or any static server
+npx serve .
+python -m http.server
 ```
-
-There are no tests configured (`npm test` is a placeholder). `npm audit` runs `ncu && better-npm-audit audit` for dependency checks.
-
-## Build Pipeline (Grunt)
-
-The default `grunt` task runs these steps in order:
-
-1. `useminPrepare` — scans index.html for build blocks
-2. `copy` — copies files from `dev/` → `dist/`
-3. `concat` — concatenates JS files into `public/min/`
-4. `ngAnnotate` — adds Angular DI annotations (must run before uglify)
-5. `uglify` — minifies JS into `public/minified/`
-6. `cssmin` — minifies CSS into `public/minified/`
-7. `usemin` — rewrites script/link tags to point at minified files
-8. `cachebreaker` — appends `?v=<hash>` to asset URLs in `dist/index.html`
 
 ## Architecture
 
 ### Tech Stack
-- **AngularJS 1.x** — SPA framework (legacy, not Angular 2+)
-- **Bootstrap 5** — responsive layout
-- **Grunt** — build automation (GruntFile.js)
-- **Leaflet.js** — map widget
-- **WOW.js + Animate.css** — scroll-triggered animations
+- **Vanilla HTML/CSS/JS** — no frameworks, no build tools
+- **Leaflet.js** — map widget (CDN)
+- **FontAwesome 6** — icons (CDN)
+- **Inter + Space Mono** — fonts (Google Fonts CDN)
+- **Intersection Observer API** — scroll-triggered animations (native)
 
 ### File Layout
 
 | Path | Purpose |
 |------|---------|
-| `JS/app.js` | Source AngularJS app — single controller with all scope data |
-| `dev/index.html` | Source HTML template (copied to `dist/` during build) |
-| `dist/index.html` | Production HTML (has cache-busted asset refs) |
-| `dist/main/js/main.min.js` | Minified app JS |
-| `public/minified/all.min.css` | Minified combined CSS |
-| `partials/` | Legacy HTML fragments (not wired into current build) |
-| `GruntFile.js` | Full build configuration |
+| `index.html` | The entire site — all sections in one file |
+| `assets/css/style.css` | All custom styles — dark theme, layout, animations |
+| `assets/js/main.js` | Portfolio data array + all interactivity |
+| `assets/img/` | Project images and profile photo |
+| `assets/JasonRayga.pdf` | Resume download |
+| `CNAME` | GitHub Pages custom domain (`www.jrayga.com`) |
 
 ### Application Structure
 
-There is one AngularJS module (`"module"`) with one controller (`IndexCtrl`). All site content is in `JS/app.js`:
+**`assets/js/main.js`** is a set of self-contained init functions called on `DOMContentLoaded`:
 
-- **Navigation** — `$scope.nav` array drives the top nav links (anchor hrefs like `#intro`, `#about`)
-- **Portfolio items** — `$scope.worksImgAndDesc` array; each entry has `title`, `desc`, `img`, `link`, `tag`
-- **Scroll** — `$scope.goTo(id)` uses `$anchorScroll` for smooth navigation
-- **Footer year** — dynamically set from `new Date().getFullYear()`
+- **`PORTFOLIO` array** — all portfolio project data; `renderPortfolio()` renders cards into `#portfolio-grid`
+- **`initNavbar()`** — scroll shadow on `#navbar`, mobile hamburger toggle with body scroll lock
+- **`initReveal()`** — Intersection Observer adds `.visible` to `.reveal` elements as they enter the viewport
+- **`initSkillBars()`** — Intersection Observer animates `.skill-fill` widths from each bar's `data-level` attribute
+- **`initMap()`** — Leaflet map centred on Manila, Philippines
+- **`setYear()`** — writes current year into `#year` span
 
-The entire page is one `index.html` file. Sections are stacked vertically and revealed by scrolling; there is no client-side routing.
+**`assets/css/style.css`** uses CSS custom properties on `:root` (`--bg`, `--accent`, `--text-dim`, etc.) for the dark navy + teal colour scheme. No preprocessor needed.
+
+### Sections
+
+`index.html` has five sections stacked vertically (`#hero`, `#about`, `#skills`, `#portfolio`, `#services`), followed by the Leaflet `#map` div and `<footer>`. No client-side routing.
 
 ### Deployment
 
-Deployed via GitHub Pages with a custom domain. `CNAME` file contains `www.jrayga.com`. The `dist/` folder is what gets served.
+GitHub Pages serves the `master` branch root. `CNAME` maps `www.jrayga.com` to the Pages URL.
