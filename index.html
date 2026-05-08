@@ -1,11 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" ng-app="module">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <base href="/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta itemprop="name" content="JasonRayga" />
     <meta itemprop="url" content="https://www.jrayga.com/" />
     <meta
@@ -17,8 +15,11 @@
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image:alt" content="JasonRayga" />
-    <meta name="twitter:site" content="https://twitter.com/JasonRayga" />
+    <meta name="twitter:site" content="@JasonRayga" />
+    <meta name="twitter:title" content="Jason Rayga — Fullstack Developer" />
+    <meta name="twitter:description" content="Experienced fullstack developer specialising in web and mobile applications. Lead developer of the Philippines' first applicant tracking software." />
+    <meta name="twitter:image" content="https://www.jrayga.com/dist/main/assets/img/jasonrayga.png" />
+    <meta name="twitter:image:alt" content="Jason Rayga" />
 
     <!-- Facebook Open-graph data -->
     <meta property="og:title" content="JasonRayga" />
@@ -26,7 +27,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" itemprop="url" content="https://www.jrayga.com/" />
     <meta name="robots" content="all,follow" />
-    <meta property="og:image" content="./dist/main/assets/img/jasonrayga.png" />
+    <meta property="og:image" content="https://www.jrayga.com/dist/main/assets/img/jasonrayga.png" />
     <meta
       property="og:description"
       content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
@@ -34,16 +35,17 @@
 
     <!-- Favicon-->
     <link
-      rel="shortcut icon"
+      rel="icon"
       type="image/png"
       href="./dist/main/assets/img/jasonrayga.png"
     />
 
     <!-- Main CSS and Other CSS Plugins -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100"
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100&display=swap"
     />
     <link
       rel="stylesheet"
@@ -76,8 +78,6 @@
     <script src="./dist/main/js/main.min.js"></script>
     <script src="./public/minified/all.min.js"></script>
 
-    <!-- BASE HREF -->
-    <base href="/" />
   </head>
 
   <body ng-controller="Index" ng-cloak>
@@ -325,7 +325,7 @@
                 <div
                   role="progressbar"
                   style="width: 50%"
-                  aria-valuenow="60"
+                  aria-valuenow="50"
                   aria-valuemin="0"
                   aria-valuemax="100"
                   class="progress-bar"
@@ -499,6 +499,16 @@
                 referrerpolicy="no-referrer"
               >
                 <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a
+                title="GitHub"
+                href="https://github.com/jrayga"
+                target="_blank"
+                data-wow-delay="0.4s"
+                class="external github wow fadeInUp"
+                referrerpolicy="no-referrer"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
               </a>
               <a
                 title="Email"
