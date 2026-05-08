@@ -1,52 +1,50 @@
 <!doctype html>
-<html lang="en" ng-app="module">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta itemprop="name" content="JasonRayga" />
+
+    <title>Jason Rayga — Fullstack Developer</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Jason Rayga is a fullstack developer specialising in web and mobile applications. Lead developer of the Philippines' first applicant tracking software." />
+    <meta name="robots" content="all,follow" />
+    <meta itemprop="name" content="Jason Rayga" />
     <meta itemprop="url" content="https://www.jrayga.com/" />
-    <meta
-      name="description"
-      content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
-    />
 
-    <title>All About | Jason Rayga</title>
+    <!-- Open Graph -->
+    <meta property="og:title" content="Jason Rayga — Fullstack Developer" />
+    <meta property="og:site_name" content="Jason Rayga" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.jrayga.com/" />
+    <meta property="og:image" content="https://www.jrayga.com/dist/main/assets/img/jasonrayga.png" />
+    <meta property="og:description" content="Fullstack developer specialising in web and mobile applications. Lead developer of the Philippines' first applicant tracking software." />
 
-    <!-- Twitter Card data -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@JasonRayga" />
     <meta name="twitter:title" content="Jason Rayga — Fullstack Developer" />
-    <meta name="twitter:description" content="Experienced fullstack developer specialising in web and mobile applications. Lead developer of the Philippines' first applicant tracking software." />
+    <meta name="twitter:description" content="Fullstack developer specialising in web and mobile applications." />
     <meta name="twitter:image" content="https://www.jrayga.com/dist/main/assets/img/jasonrayga.png" />
     <meta name="twitter:image:alt" content="Jason Rayga" />
 
-    <!-- Facebook Open-graph data -->
-    <meta property="og:title" content="JasonRayga" />
-    <meta property="og:site_name" content="JasonRayga" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" itemprop="url" content="https://www.jrayga.com/" />
-    <meta name="robots" content="all,follow" />
-    <meta property="og:image" content="https://www.jrayga.com/dist/main/assets/img/jasonrayga.png" />
-    <meta
-      property="og:description"
-      content="As an outgoing and experienced web developer, I possess a strong skill-set in both backend and frontend development. I have a proven track record of success as the lead developer for the Philippines' first applicant tracking software and resume bank. I am well-versed in various programming languages and have experience creating dynamic web and mobile applications..."
-    />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./dist/main/assets/img/jasonrayga.png" />
 
-    <!-- Favicon-->
-    <link
-      rel="icon"
-      type="image/png"
-      href="./dist/main/assets/img/jasonrayga.png"
-    />
-
-    <!-- Main CSS and Other CSS Plugins -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,100%7CRoboto:400,700,300,100&display=swap"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
+
+    <!-- Leaflet CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css"
@@ -54,528 +52,281 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link
-      rel="stylesheet"
-      href="./dist/main/assets/css/animate_css/source/animate.css"
-    />
-    <link rel="stylesheet" href="./dist/main/css/main.min.css" />
 
-    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-      crossorigin="anonymous"
-    />
-
-    <!-- AngularJS, Other JS Plugins and Controller-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.3/angular.min.js"
-      integrity="sha512-KZmyTq3PLx9EZl0RHShHQuXtrvdJ+m35tuOiwlcZfs/rE7NZv29ygNA8SFCkMXTnYZQK2OX0Gm2qKGfvWEtRXA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="./dist/main/js/main.min.js"></script>
-    <script src="./public/minified/all.min.js"></script>
-
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
 
-  <body ng-controller="Index" ng-cloak>
-    <!-- navbar-->
-    <nav
-      class="navbar navbar-expand-lg navbar-light py-4 py-lg-0 fixed-top bg-white border-bottom"
-    >
-      <div class="container">
-        <a
-          class="navbar-brand font-serif text-uppercase h6 text-primary fw-bold mb-0"
-          ng-click="goTo('intro')"
-          href=""
-        >
-          Jason Rayga
-        </a>
-        <button
-          class="navbar-toggler border-0"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+  <body>
+
+    <!-- ============================================================
+         Navigation
+         ============================================================ -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#hero" class="nav-logo">JR</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="nav navbar-nav ms-auto mb-2 mb-lg-0">
-            <li
-              class="nav-item"
-              ng-repeat="(k,v) in navigationURLs track by $index"
-            >
-              <a class="nav-link text-uppercase" ng-click="goTo(v.url)" href="">
-                {{v.title}}
-              </a>
-            </li>
-          </ul>
+        <div class="nav-menu">
+          <ol class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#services">Services</a></li>
+          </ol>
+          <a
+            href="./dist/main/assets/JasonRayga.pdf"
+            class="btn-nav"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Resume</a>
         </div>
       </div>
     </nav>
 
-    <!-- Intro Image-->
-    <section id="intro" class="intro-section pb-2 intro-image-bg">
-      <div class="container text-center">
-        <div data-animate="fadeInDown" class="logo">
-          <img
-            src="./dist/main/assets/img/intro-icon.png"
-            alt="logo"
-            width="130"
-          />
-        </div>
-        <h1
-          data-animate="fadeInDown"
-          class="text-shadow mb-5"
-          style="text-shadow: -7px 5px 4px black"
-        >
-          <strong>Hello, hola, नमस्ते, Kamusta!</strong>
-        </h1>
-        <p
-          data-animate="slideInUp"
-          class="h3 text-shadow text-400"
-          style="text-shadow: -3px 3px 4px black"
-        >
-          <strong>Jason Rayga here! At your service ❤️</strong>
+    <!-- Sidebar social links (desktop) -->
+    <div class="side-social">
+      <a href="https://www.facebook.com/jsonryga/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jasonrayga/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="https://github.com/jrayga" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:raygajason@gmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <div class="side-line"></div>
+    </div>
+
+    <!-- ============================================================
+         Hero
+         ============================================================ -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-intro animate-fade-up" style="--delay: 0.1s">Hi, my name is</p>
+        <h1 class="hero-name animate-fade-up" style="--delay: 0.2s">Jason Rayga.</h1>
+        <h2 class="hero-tagline animate-fade-up" style="--delay: 0.3s">I build things for the web.</h2>
+        <p class="hero-desc animate-fade-up" style="--delay: 0.4s">
+          I'm a fullstack developer with a passion for crafting exceptional web and mobile
+          applications. Lead developer of the Philippines' first applicant tracking software
+          and resume bank.
         </p>
-      </div>
-    </section>
-
-    <!-- About-->
-    <section id="about" class="about-section">
-      <div class="container">
-        <header class="text-center">
-          <h2 data-animate="fadeInDown" class="title">About me</h2>
-        </header>
-        <div class="row">
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <p>
-              Hi there! 👋 I'm an outgoing and seasoned web developer with
-              expertise in both backend and frontend development.
-            </p>
-            <p>
-              I take pride in my role as the lead developer behind the
-              Philippines' first applicant tracking system and resume bank, a
-              project that highlights my ability to deliver impactful solutions.
-            </p>
-            <p>
-              With a versatile skill set spanning multiple programming
-              languages, I specialize in crafting dynamic web and mobile
-              applications that meet modern demands.
-            </p>
-            <p>
-              Curious to know more about my journey? Click my picture below to
-              download my resume! 😊
-            </p>
-
-            <div class="row">
-              <div data-animate="fadeInUp" class="col-sm-6 mx-auto">
-                <a
-                  href="./dist/main/assets/JasonRayga.pdf"
-                  title="Download Resume"
-                >
-                  <img
-                    src="./dist/main/assets/img/jasonrayga.png"
-                    alt="This is me - Jason Rayga"
-                    class="image rounded-circle img-fluid"
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <div class="skill-item">
-              <div class="progress-title">PHP</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 60%"
-                  aria-valuenow="60"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">PostgreSQL</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 65%"
-                  aria-valuenow="65"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">SQL Server</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 60%"
-                  aria-valuenow="60"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">Javascript & Typescript</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 80%"
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">HTML coding</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 80%"
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">CSS & Bootstrap</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 70%"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">Ionic Angular</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 70%"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">Angular 2+</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 80%"
-                  aria-valuenow="80"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">AngularJS 1.x</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 70%"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">Firebase (Hosting and Functions)</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 70%"
-                  aria-valuenow="70"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar progress-bar-skill5"
-                ></div>
-              </div>
-            </div>
-            <div class="skill-item">
-              <div class="progress-title">C# (ASP.NET)</div>
-              <div class="progress">
-                <div
-                  role="progressbar"
-                  style="width: 50%"
-                  aria-valuenow="50"
-                  aria-valuemin="0"
-                  aria-valuemax="100"
-                  class="progress-bar"
-                ></div>
-              </div>
-            </div>
-          </div>
+        <div class="hero-actions animate-fade-up" style="--delay: 0.5s">
+          <a href="#portfolio" class="btn btn-primary">Check out my work</a>
+          <a
+            href="./dist/main/assets/JasonRayga.pdf"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Download CV</a>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
-    <section id="services" class="bg-gradient services-section">
-      <div class="container">
-        <header class="text-center">
-          <h2 data-animate="fadeInDown" class="title">Services</h2>
-        </header>
-        <div class="row services text-center">
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <div class="icon"><i class="fa fa-search"></i></div>
-            <h3 class="heading mb-3 text-400">Consulting</h3>
-            <p class="text-left description">
-              As a seasoned software developer with over six years of experience
-              in the industry, I possess a deep passion for technology and an
-              extensive skill set that encompasses various aspects of app
-              development. With my wealth of general IT knowledge, I have honed
-              my expertise in this field. As a highly knowledgeable and
-              experienced professional, I excel at guiding clients through the
-              intricacies of app development. I offer valuable insights, best
-              practices, and innovative solutions to address complex challenges.
-              Whether you need advice on coding, software architecture, or IT
-              strategies, I am your go-to consultant who can provide tailored
-              guidance based on your unique needs. With a proven track record of
-              successful projects and a commitment to staying up-to-date with
-              the latest industry trends, I am the ideal partner to help you
-              navigate the ever-evolving world of app development and
-              information technology. Count on me to deliver exceptional results
-              and assist you in achieving your goals.
-            </p>
-          </div>
-          <div data-animate="fadeInUp" class="col-lg-6">
-            <div class="icon"><i class="fa fa-desktop"></i></div>
-            <h3 class="heading mb-3 text-400">Fullstack App Development</h3>
-            <p class="text-left description">
-              With over six years of experience as a skilled software developer,
-              I excel in providing comprehensive Fullstack App Development
-              solutions. My deep understanding of both frontend and backend
-              technologies enables me to create robust and user-friendly
-              applications. Leveraging my expertise in various programming
-              languages, frameworks, and databases, I seamlessly navigate the
-              entire development process, from conceptualization to deployment.
-              My keen eye for detail and commitment to delivering high-quality
-              software make me a valuable asset to any development team. I
-              continuously stay abreast of the latest industry trends and best
-              practices, ensuring that the applications I develop are scalable,
-              efficient, and meet the unique needs of clients. Whether it's
-              crafting intuitive user interfaces or architecting powerful
-              server-side logic, I consistently demonstrate my ability to create
-              exceptional Fullstack applications that drive business growth and
-              user satisfaction.
-            </p>
-          </div>
-        </div>
-        <hr data-animate="fadeInUp" />
-        <div data-animate="fadeInUp" class="text-center">
-          <p class="lead">
-            Would you like to know more or just discuss something?
+    <!-- ============================================================
+         About
+         ============================================================ -->
+    <section id="about" class="section">
+      <h2 class="section-heading reveal"><span class="section-num">01.</span> About Me</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            Hi there! I'm an outgoing and seasoned fullstack developer with expertise spanning
+            both backend and frontend development — from architecting APIs to crafting polished
+            user interfaces.
           </p>
           <p>
-            <a
-              href="mailto:raygajason@gmail.com"
-              target="_blank"
-              class="btn btn-outline-light link-scroll"
-            >
-              Contact me
-            </a>
+            I take pride in my role as the lead developer behind the
+            <strong>Philippines' first applicant tracking system and resume bank</strong>,
+            a project that demonstrates my ability to ship impactful, production-grade software.
           </p>
+          <p>
+            With a versatile skill set across multiple languages and frameworks, I specialise in
+            building dynamic web and mobile applications that solve real problems. Always looking
+            for the next challenge — whether consulting on architecture or shipping features
+            end-to-end.
+          </p>
+          <p>
+            Curious about my journey?
+            <a
+              href="./dist/main/assets/JasonRayga.pdf"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Download my resume.</a>
+          </p>
+          <ul class="tech-list">
+            <li>JavaScript &amp; TypeScript</li>
+            <li>Angular / AngularJS</li>
+            <li>PHP</li>
+            <li>C# / ASP.NET</li>
+            <li>PostgreSQL / SQL Server</li>
+            <li>Firebase</li>
+            <li>Ionic Angular</li>
+            <li>Node.js</li>
+          </ul>
+        </div>
+        <div class="about-photo reveal">
+          <a
+            href="./dist/main/assets/JasonRayga.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Download Resume"
+          >
+            <img
+              src="./dist/main/assets/img/jasonrayga.png"
+              alt="Jason Rayga"
+              loading="lazy"
+            />
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- References -->
-    <section id="references">
-      <div class="container">
-        <div class="col-sm-12">
-          <div class="mb-5 text-center">
-            <h2 data-animate="fadeInUp" class="title">My work</h2>
-            <p data-animate="fadeInUp" class="lead">
-              I have worked on dozens of projects so I have picked only the
-              latest for you.
-            </p>
-          </div>
-          <div id="detail">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <span class="close">x</span>
-                <div id="detail-slider" class="owl-carousel owl-theme"></div>
-                <div class="text-center">
-                  <h1 id="detail-title" class="title"></h1>
-                </div>
-                <div id="detail-content"></div>
-              </div>
-            </div>
-          </div>
-          <!-- Reference detail-->
-          <div id="references-masonry" data-animate="fadeInUp">
-            <div class="row">
-              <div
-                class="reference-item col-sm-12 col-md-4 col-lg-4"
-                ng-repeat="(k,v) in worksImgAndDesc track by $index"
-                data-category="webapp"
-              >
-                <div class="reference">
-                  <a href="">
-                    <img
-                      src="{{v.img}}"
-                      alt="{{v.title}}"
-                      class="image-responsive"
-                    />
-                    <div class="overlay">
-                      <div class="inner">
-                        <h3 class="h4 reference-title">{{v.title}}</h3>
-                        <p><small>{{v.shortDesc}}</small></p>
-                      </div>
-                    </div>
-                  </a>
-                  <div
-                    data-images="{{v.img}}"
-                    class="sr-only reference-description"
-                  >
-                    <p>{{v.desc}}</p>
-                    <p class="buttons text-center">
-                      <a
-                        href="{{v.url}}"
-                        target="_blank"
-                        class="btn btn-outline-primary"
-                        ><i class="fa fa-globe"></i> Visit
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <!-- ============================================================
+         Skills
+         ============================================================ -->
+    <section id="skills" class="section">
+      <h2 class="section-heading reveal"><span class="section-num">02.</span> Skills</h2>
+      <div class="skills-container">
+
+        <div class="skill-bar reveal" data-level="80">
+          <div class="skill-info"><span>JavaScript &amp; TypeScript</span><span class="skill-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
         </div>
+
+        <div class="skill-bar reveal" data-level="80">
+          <div class="skill-info"><span>HTML &amp; CSS</span><span class="skill-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="80">
+          <div class="skill-info"><span>Angular 2+</span><span class="skill-pct">80%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="70">
+          <div class="skill-info"><span>Ionic Angular</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="70">
+          <div class="skill-info"><span>CSS &amp; Bootstrap</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="70">
+          <div class="skill-info"><span>Firebase</span><span class="skill-pct">70%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="65">
+          <div class="skill-info"><span>PostgreSQL</span><span class="skill-pct">65%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="60">
+          <div class="skill-info"><span>PHP</span><span class="skill-pct">60%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="60">
+          <div class="skill-info"><span>SQL Server</span><span class="skill-pct">60%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+        <div class="skill-bar reveal" data-level="50">
+          <div class="skill-info"><span>C# / ASP.NET</span><span class="skill-pct">50%</span></div>
+          <div class="skill-track"><div class="skill-fill"></div></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Portfolio
+         ============================================================ -->
+    <section id="portfolio" class="section">
+      <h2 class="section-heading reveal"><span class="section-num">03.</span> My Work</h2>
+      <p class="section-sub reveal">A selection of projects I've built or contributed to.</p>
+      <div class="portfolio-grid" id="portfolio-grid">
+        <!-- Rendered by assets/js/main.js -->
+      </div>
+    </section>
+
+    <!-- ============================================================
+         Services
+         ============================================================ -->
+    <section id="services" class="section">
+      <h2 class="section-heading reveal"><span class="section-num">04.</span> Services</h2>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa fa-search" aria-hidden="true"></i></div>
+          <h3>Consulting</h3>
+          <p>
+            With over six years in software development, I offer expert guidance on app
+            architecture, technology choices, and development best practices. Whether
+            navigating a complex technical challenge or planning a new product, I provide
+            tailored insights to help you succeed.
+          </p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon"><i class="fa fa-desktop" aria-hidden="true"></i></div>
+          <h3>Fullstack Development</h3>
+          <p>
+            From intuitive frontends to robust backend APIs, I deliver complete web and
+            mobile solutions end-to-end. I bring both depth and breadth to every project —
+            ensuring your application performs exceptionally and scales with your needs.
+          </p>
+        </div>
+      </div>
+      <div class="services-cta reveal">
+        <p>Got a project in mind?</p>
+        <a href="mailto:raygajason@gmail.com" class="btn btn-primary">Let's Talk</a>
       </div>
     </section>
 
     <!-- Map -->
     <div id="map"></div>
-    <footer class="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 text-center text-lg-left">
-            <p class="social">
-              <a
-                title="Facebook"
-                href="https://www.facebook.com/jsonryga/"
-                target="_blank"
-                class="external facebook wow fadeInUp"
-                referrerpolicy="no-referrer"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                title="Linkedin"
-                href="https://www.linkedin.com/in/jasonrayga/"
-                target="_blank"
-                data-wow-delay="0.2s"
-                class="external linkedin wow fadeInUp"
-                referrerpolicy="no-referrer"
-              >
-                <i class="fab fa-linkedin" aria-hidden="true"></i>
-              </a>
-              <a
-                title="GitHub"
-                href="https://github.com/jrayga"
-                target="_blank"
-                data-wow-delay="0.4s"
-                class="external github wow fadeInUp"
-                referrerpolicy="no-referrer"
-              >
-                <i class="fab fa-github" aria-hidden="true"></i>
-              </a>
-              <a
-                title="Email"
-                href="mailto:raygajason@gmail.com"
-                target="_blank"
-                data-wow-delay="0.6s"
-                class="email wow fadeInUp"
-                referrerpolicy="no-referrer"
-              >
-                <i class="fas fa-envelope" aria-hidden="true"></i>
-              </a>
-            </p>
-          </div>
-          <!-- /.6-->
-          <div class="col-md-6 text-center text-lg-right mt-4 mt-lg-0">
-            <p>© {{yearNow}} JasonRayga. All rights reserved.</p>
-          </div>
+
+    <!-- ============================================================
+         Footer
+         ============================================================ -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-social">
+          <a href="https://www.facebook.com/jsonryga/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jasonrayga/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/jrayga" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:raygajason@gmail.com" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
         </div>
+        <p class="footer-copy">© <span id="year"></span> Jason Rayga. All rights reserved.</p>
       </div>
     </footer>
 
-    <!-- Other JS Plugins -->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/angular-route/1.8.3/angular-route.min.js"
-      integrity="sha512-y1qD3hz/IAf8W4+/UMLZ+CN6LIoUGi7srWJ3r1R17Hid8x0yXe+1B5ZelkaL1Mjzedzu0Cg3HBvDG02SAgSzBw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/angular-animate/1.8.3/angular-animate.min.js"
-      integrity="sha512-Vhup4/4s+jnmiFsp1Sg1/6jXncRbIBc+fKemYjq1n+nEXthmeASyaWnClWsAV5Sas7WbLMLNYYHw6TxwQE4oPQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Leaflet JS -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
       integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.8.2/countUp.min.js"
-      integrity="sha512-bo+22vUP5nA4TPXCErmSTqmrBTFpnK9FXPKjDAahqShfXIdh9JpMl0iS/ZXHPw70OzdRz3xP3pqJfoo89JITkQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
 
-    <script type="text/javascript">
-      // Scripts here should prevent zooming in when using mobile view
-
-      document.addEventListener("gesturestart", function (e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-
-      document.addEventListener("gesturechange", function (e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-
-      document.addEventListener("gestureend", function (e) {
-        e.preventDefault();
-        // special hack to prevent zoom-to-tabs gesture in safari
-        document.body.style.zoom = 0.99;
-      });
-    </script>
+    <!-- App -->
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
