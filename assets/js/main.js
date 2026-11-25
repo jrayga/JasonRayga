@@ -14,6 +14,10 @@ const PORTFOLIO = [
     url: "https://www.linkedin.com/in/rats-global-5a79a3145/",
     linkLabel: "LinkedIn",
     linkIcon: "fab fa-linkedin-in",
+    screenshot: {
+      src: "./assets/img/rats-landing.jpg",
+      alt: "RATS landing page with featured clients and a prompt to deposit a resume",
+    },
   },
   {
     title: "Q App",
