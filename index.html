@@ -22,7 +22,7 @@
     <meta property="og:url" content="https://www.jrayga.com/" />
     <meta
       property="og:image"
-      content="https://www.jrayga.com/assets/img/jasonrayga.png"
+      content="https://www.jrayga.com/assets/img/jasonrayga.jpg"
     />
     <meta
       property="og:description"
@@ -39,12 +39,12 @@
     />
     <meta
       name="twitter:image"
-      content="https://www.jrayga.com/assets/img/jasonrayga.png"
+      content="https://www.jrayga.com/assets/img/jasonrayga.jpg"
     />
-    <meta name="twitter:image:alt" content="Jason Rayga" />
+    <meta name="twitter:image:alt" content="Photo of Jason Rayga" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./assets/img/jasonrayga.png" />
+    <link rel="icon" type="image/jpeg" href="./assets/img/jasonrayga.jpg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -74,8 +74,10 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
-    <!-- Apply saved theme before first paint to prevent flash -->
+    <!-- Apply saved theme before first paint to prevent flash; flag JS so
+         scroll-reveal hiding only applies when JS can reveal the content -->
     <script>
+      document.documentElement.classList.add("js");
       try {
         const t = localStorage.getItem("theme");
         if (t === "light" || t === "dark")
@@ -85,18 +87,25 @@
   </head>
 
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
     <!-- ============================================================
          Navigation
          ============================================================ -->
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Primary">
       <div class="nav-inner">
-        <a href="#hero" class="nav-logo">JR</a>
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <a href="#hero" class="nav-logo" aria-label="Jason Rayga, back to top">JR</a>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="nav-menu">
+        <div class="nav-menu" id="nav-menu">
           <ol class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -156,6 +165,7 @@
     <!-- ============================================================
          Hero
          ============================================================ -->
+    <main id="main">
     <section id="hero">
       <div class="hero-content">
         <p class="hero-intro animate-fade-up" style="--delay: 0.1s">
@@ -240,10 +250,13 @@
             target="_blank"
             rel="noopener noreferrer"
             title="Download Resume"
+            aria-label="Download Jason Rayga's resume (PDF)"
           >
             <img
-              src="./assets/img/jasonrayga.png"
-              alt="Jason Rayga"
+              src="./assets/img/jasonrayga.jpg"
+              alt="Photo of Jason Rayga"
+              width="960"
+              height="956"
               loading="lazy"
             />
           </a>
@@ -264,70 +277,70 @@
             <span>JavaScript &amp; TypeScript</span
             ><span class="skill-pct">80%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="JavaScript &amp; TypeScript proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="80">
           <div class="skill-info">
             <span>HTML &amp; CSS</span><span class="skill-pct">80%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="HTML &amp; CSS proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="80">
           <div class="skill-info">
             <span>Angular 2+</span><span class="skill-pct">80%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="Angular 2+ proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="70">
           <div class="skill-info">
             <span>Ionic Angular</span><span class="skill-pct">70%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="Ionic Angular proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="70">
           <div class="skill-info">
             <span>CSS &amp; Bootstrap</span><span class="skill-pct">70%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="CSS &amp; Bootstrap proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="70">
           <div class="skill-info">
             <span>Firebase</span><span class="skill-pct">70%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="Firebase proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="65">
           <div class="skill-info">
             <span>PostgreSQL</span><span class="skill-pct">65%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="PostgreSQL proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="60">
           <div class="skill-info">
             <span>PHP</span><span class="skill-pct">60%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="PHP proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="60">
           <div class="skill-info">
             <span>SQL Server</span><span class="skill-pct">60%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="SQL Server proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><div class="skill-fill"></div></div>
         </div>
 
         <div class="skill-bar reveal" data-level="50">
           <div class="skill-info">
             <span>C# / ASP.NET</span><span class="skill-pct">50%</span>
           </div>
-          <div class="skill-track"><div class="skill-fill"></div></div>
+          <div class="skill-track" role="progressbar" aria-label="C# / ASP.NET proficiency" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><div class="skill-fill"></div></div>
         </div>
       </div>
     </section>
@@ -344,6 +357,18 @@
       </p>
       <div class="portfolio-grid" id="portfolio-grid">
         <!-- Rendered by assets/js/main.js -->
+        <noscript>
+          <p class="portfolio-empty">
+            Projects load with JavaScript. In the meantime, see my work in
+            <a
+              href="./assets/JasonRayga.pdf"
+              class="text-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              >my resume (PDF)</a
+            >.
+          </p>
+        </noscript>
       </div>
     </section>
 
@@ -386,11 +411,23 @@
         <a href="mailto:raygajason@gmail.com" class="btn btn-primary"
           >Let's Talk</a
         >
+        <p class="services-cta-alt">
+          Or write to
+          <a href="mailto:raygajason@gmail.com" class="text-link"
+            >raygajason@gmail.com</a
+          >
+        </p>
       </div>
     </section>
 
+    </main>
+
     <!-- Map -->
-    <div id="map"></div>
+    <div
+      id="map"
+      role="region"
+      aria-label="Map showing my location: Manila, Philippines"
+    ></div>
 
     <!-- ============================================================
          Footer
