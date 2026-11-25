@@ -7,6 +7,7 @@
   --bg-light: #112240;
   --bg-card: #1d3557;
   --accent: #64ffda;
+  --accent-2: #a8edea; /* skill-bar gradient end */
   --accent-tint: rgba(100, 255, 218, 0.1);
   --text: #ccd6f6;
   --text-dim: #8892b0;
@@ -36,6 +37,7 @@
   --bg-light: #e8edf8;
   --bg-card: #dde3f0;
   --accent: #0f766e;
+  --accent-2: #0d9488;
   --accent-tint: rgba(15, 118, 110, 0.08);
   --text: #1e293b;
   --text-dim: #475569;
@@ -52,6 +54,7 @@
     --bg-light: #e8edf8;
     --bg-card: #dde3f0;
     --accent: #0f766e;
+    --accent-2: #0d9488;
     --accent-tint: rgba(15, 118, 110, 0.08);
     --text: #1e293b;
     --text-dim: #475569;
@@ -99,7 +102,39 @@ img {
   max-width: 100%;
   display: block;
 }
-ul {
+
+/* Visible keyboard focus for every interactive element */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 8px;
+  z-index: 400;
+  padding: 10px 16px;
+  background: var(--bg-light);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Anchored sections shouldn't hide under the fixed navbar */
+section[id] {
+  scroll-margin-top: var(--nav-h);
+}
+ul,
+ol {
   list-style: none;
 }
 
@@ -136,6 +171,10 @@ ul {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  min-width: 44px;
+  min-height: 44px;
   font-family: var(--font-mono);
   font-size: 1.4rem;
   font-weight: 700;
@@ -202,6 +241,9 @@ ul {
   border: none;
   cursor: pointer;
   padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
   z-index: 201;
   position: relative;
 }
@@ -230,15 +272,20 @@ ul {
 .side-social {
   position: fixed;
   bottom: 0;
-  left: 30px;
+  left: 16px;
   z-index: 10;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 4px;
 }
 
 .side-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   color: var(--text-dim);
   font-size: 1rem;
   transition: var(--transition);
@@ -326,6 +373,7 @@ ul {
   color: var(--text-dim);
   line-height: 1.1;
   margin-bottom: 24px;
+  text-wrap: balance;
 }
 
 .hero-desc {
@@ -508,7 +556,7 @@ ul {
 
 .skill-fill {
   height: 100%;
-  background: linear-gradient(90deg, var(--accent), #a8edea);
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
   border-radius: 99px;
   width: 0%;
   transition: width 1s var(--ease);
@@ -607,18 +655,33 @@ ul {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--text-dim);
+  background: none;
+  border: none;
+  cursor: pointer;
+  min-height: 44px;
   display: flex;
   align-items: center;
   gap: 5px;
   transition: var(--transition);
 }
+.portfolio-card-more:hover {
+  color: var(--accent);
+}
 .portfolio-card:hover .portfolio-card-more {
   color: var(--accent);
+}
+.portfolio-card:focus-within {
+  border-color: rgba(100, 255, 218, 0.2);
+}
+.portfolio-empty {
+  grid-column: 1 / -1;
+  color: var(--text-dim);
 }
 
 .portfolio-card-link {
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   gap: 6px;
   font-family: var(--font-mono);
   font-size: 0.78rem;
@@ -678,14 +741,16 @@ ul {
 
 .modal-close {
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 10px;
+  right: 10px;
   background: none;
   border: none;
   color: var(--text-dim);
   font-size: 1.1rem;
   cursor: pointer;
-  padding: 7px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
   border-radius: 50%;
   transition: var(--transition);
   z-index: 1;
@@ -729,6 +794,44 @@ ul {
   color: var(--text-dim);
   line-height: 1.85;
   margin-bottom: 24px;
+}
+
+.modal-meta {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 18px;
+  font-size: 0.9rem;
+  color: var(--text);
+}
+.modal-meta strong {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+.tag-list li {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  background: var(--accent-tint);
+  border-radius: var(--radius);
+  padding: 3px 10px;
+}
+
+.modal-shot {
+  margin-bottom: 24px;
+}
+.modal-shot img {
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid var(--bg-card);
 }
 
 @media (max-width: 520px) {
@@ -798,6 +901,12 @@ ul {
   margin-bottom: 20px;
 }
 
+.services-cta .services-cta-alt {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  margin: 20px 0 0;
+}
+
 /* ============================================================
    Map
    ============================================================ */
@@ -822,11 +931,16 @@ footer {
 .footer-social {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  gap: 8px;
   margin-bottom: 20px;
 }
 
 .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   color: var(--text-dim);
   font-size: 1.1rem;
   transition: var(--transition);
@@ -853,6 +967,8 @@ footer {
   font-size: 1rem;
   cursor: pointer;
   padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
   border-radius: 50%;
   transition: var(--transition);
   display: flex;
@@ -869,7 +985,7 @@ footer {
 /* ============================================================
    Animations
    ============================================================ */
-.animate-fade-up {
+.js .animate-fade-up {
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.6s ease forwards;
@@ -883,7 +999,7 @@ footer {
   }
 }
 
-.reveal {
+.js .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition:
@@ -891,9 +1007,28 @@ footer {
     transform 0.55s ease;
 }
 
-.reveal.visible {
+.js .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Respect reduced-motion preference: no movement, no smooth scrolling */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0s !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js .reveal,
+  .js .animate-fade-up {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* ============================================================
@@ -931,13 +1066,20 @@ footer {
     padding-top: var(--nav-h);
     gap: 28px;
     transform: translateX(100%);
-    transition: transform 0.3s ease;
+    visibility: hidden;
+    transition:
+      transform 0.3s ease,
+      visibility 0s linear 0.3s;
     z-index: 190;
     overflow-y: auto;
   }
 
   .nav-menu.open {
     transform: translateX(0);
+    visibility: visible;
+    transition:
+      transform 0.3s ease,
+      visibility 0s;
   }
 
   .nav-links {
@@ -1002,4 +1144,9 @@ footer {
   .service-card {
     padding: 28px;
   }
+}
+
+/* Make [hidden] win over component display rules (modal meta, tag list…) */
+[hidden] {
+  display: none !important;
 }
